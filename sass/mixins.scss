@@ -1,0 +1,53 @@
+@mixin transition-property($property){
+	  -webkit-transition: $property;
+     -moz-transition: $property;
+      -ms-transition: $property;
+      -o-transition: $property;
+          transition: $property;
+}
+
+@mixin transition-duration($duration){
+-webkit-transition-duration: $duration;
+     -moz-transition-duration: $duration;
+      -ms-transition-duration: $duration;
+      -o-transition-duration: $duration;
+          transition-duration: $duration;
+};
+@mixin transition-timing-function($timing){
+	-webkit-transition-timing-function: $timing;
+     -moz-transition-timing-function: $timing;
+      -ms-transition-timing-function: $timing;
+      -o-transition-timing-function: $timing;
+          transition-timing-function: $timing;
+};
+@mixin transition-delay($delay){
+	-webkit-transition-delay: $delay;
+     -moz-transition-delay: $delay;
+      -ms-transition-delay: $delay;
+      -o-transition-delay: $delay;
+          transition-delay: $delay;
+};
+
+@mixin transform($value){
+	-webkit-transform: $value;
+     -moz-transform: $value;
+      -ms-transform: $value;
+      -o-transform: $value;
+          transform: $value;
+}
+
+@mixin perspective($persp){
+	-webkit-perspective: $persp;
+     -moz-perspective: $persp;
+      -ms-perspective: $persp;
+      -o-perspective: $persp;
+          perspective: $persp;
+}
+
+@mixin box-shadow($shadow){
+	-webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+      -o-box-shadow: $shadow;
+          box-shadow: $shadow;
+}

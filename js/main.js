@@ -1,0 +1,217 @@
+/*------------------------------------------------*/
+// Single-Page Application
+// -----------------------
+// Let's keep working on our art gallery and add some
+// more functionality to it.
+// This lesson will also serve as an introduction
+// to the MODEL-VIEW-CONTROLLER pattern
+/*------------------------------------------------*/
+
+var app = app || {};
+
+app.main = (function(mfaProjects){
+
+	console.log('Loading app.');
+
+
+	var init = function(){
+		console.log('Initializing app.');
+		render("start", mfaProjects);
+		render("menu", mfaProjects);
+		for(var i=2; i< 18; i++){
+			var div = $("<div class='draggable'>");
+			var innerDiv = $("<div class='rotate-resizeable'>");
+			var img = $('<img class="imgdrag">');
+			img.attr('src', 'img/mfadt/foods-great-adventure/sketches/' + i + '.jpg');
+			innerDiv.append(img);
+			div.append(innerDiv);
+			var randomPosX; var randomPosY; var randomRotation;
+			// randomPosX = ((Math.random()*830)+0);
+			// randomPosY = ((Math.random()*200)+0);
+			randomPosX = ((Math.random()*80)+0);
+			randomPosY = ((Math.random()*200)+0);
+			randomRotation = ((Math.random()*10)+-5);
+			div.attr("style",'left:' + randomPosX + '%;top:' + randomPosY + 'px; -webkit-transform:rotate('+randomRotation + 'deg); transform:rotate('+randomRotation + 'deg)');
+
+			$(".dragdrop").append(div);
+			
+			var params = {
+    			wheelRotate: false
+			}
+			 $(".rotate-resizeable").resizable({aspectRatio:true, maxWidth: 350}).rotatable(params);
+			 $(".draggable").draggable({
+				stack: ".draggable",
+				containment: "parent" 
+			});
+			
+		}
+				// attachEvents();
+	
+	};
+
+	var attachEvents = function(){
+		console.log('Attaching events.');
+		$(document).ready(function(){
+			console.log("document ready");
+			$('.menu .nav-diamond a').off('click').on('click', function(e){
+				var category = $(this).attr('id');
+				var categoryDiv = ".category-div-" + category;
+				var id= $(this).attr('id');
+				$('.' + id +'-diamond').toggleClass('open');
+				$('.' + id+'-diamond').toggleClass('close');
+			 	$(categoryDiv).slideToggle(500);
+			 	$('.'+ category).slideToggle(500);
+			});
+
+			$('.project-section .nav-diamond a').off('click').on('click', function(e){
+
+				var button = $(e.target);
+				 $par = $(e.target).parents().eq(1);
+				 $content = $par.prev();
+				 console.log($content);
+			    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+	    		if ($('.nav-diamond a').hasClass('up')){
+	    			var height = $content.height();
+		    		currentScrollPosition = $('#parallax').scrollTop();
+		    		$('#parallax').animate({
+		    			scrollTop: (currentScrollPosition - height)
+		    		}, 800)
+	    		}
+	    		$(this).toggleClass('down');
+			 	$(this).toggleClass('up');
+			 	var height = $content.height();
+
+			 	
+			 	 $content.slideToggle(1000);
+
+			})
+
+
+			$("#about-me").off('click').on('click', function(){
+				
+				$("#menu").css({'opacity': .1});
+				$("#parallax").css({'opacity': .1});
+				$("#about-div").show();
+				$("#about-div").css({'opacity': 1})
+
+			});
+
+			$("#close-div").off('click').on('click', function(){
+				$("#about-div").css({'opacity': 0});
+				$("#menu").css({'opacity': 1});
+				$("#parallax").css({'opacity': 1});
+				$("#about-div").hide();
+				
+			});
+			
+			$('.menu-item').off('click').on('click', function(e){
+				 e.preventDefault();
+				var posDiv = $( $(this).attr('href') ).position().top;
+				 //$('#parallax').scrollTop(1500 + posDiv);
+				 $('#parallax').animate({
+	        		scrollTop: 1500 + posDiv
+	    		}, 700, 'easeOutQuart');
+				 return false;
+		
+			});
+			var toggle = false;
+			$("#mobile-menu").off('click').on('click', function(){
+				if(toggle == false){
+					$(".menu").css({
+						right: '0px'
+					});
+					$("#mobile-menu").css({
+						right:'200px'
+					})
+					toggle = true;
+				}else{
+					$(".menu").css({
+						right: '-400px'
+					});
+					$("#mobile-menu").css({
+						right:'0px'
+					})
+					toggle = false;
+				}
+			});
+		});
+
+		$('#parallax').scroll(function(){
+			if($('#parallax').scrollTop() > 1500){
+				$("#menu").show();
+				$("#fake-menu").hide();
+				if($(window).width() < 480){
+					$("#mobile-menu").show();
+				}
+			}else{
+				$("#fake-menu").show();
+				$("#menu").hide();
+				$("#mobile-menu").hide();
+			}
+			if($('#parallax').scrollTop() > 10){
+				$("#scroll-down-text").fadeOut();
+				$("#scroll-down-arrow").fadeOut();
+			}
+			if($('#parallax').scrollTop() < 10){
+				$("#scroll-down-text").fadeIn();
+				$("#scroll-down-arrow").fadeIn();
+			}
+
+		});
+
+		
+
+	
+	}
+
+	var render = function(viewName, data){
+		console.log('Rendering template for ' + viewName);
+		console.log('Received data:');
+		// console.log(data);
+
+		// Load the template from the html file
+		var templateToCompile = $('#tpl-' + viewName).html();
+
+		// Attach the template to the underscore function
+		var compiled =  _.template(templateToCompile);
+
+		// Send the data and display the result
+		if(viewName == "start"){
+			$('#view').html(compiled(data));
+		}else if(viewName == "menu"){
+			$('#menu').html(compiled(data));
+			$('#fake-menu').html(compiled(data));
+
+		}
+		// $('#container').animate({
+  //           top: '60px'
+  //       }, 'slow');
+  		//slider
+  			$(document).ready(function(){
+  				// var nav = $("<nav class='nav-circlepop'>");
+		    //     var aPrev = $("<a class='prev' id='slider-prev' >");
+		    //     var aNext = $("<a class='next' id='slider-next' >");
+		    //     nav.append(aPrev);
+		    //     nav.append(aNext);
+		        // $(".bx-wrapper").append(nav);
+			  $('.slider').bxSlider({
+			  	video: true,
+			 	prevText: "<a class='prev' id='slider-prev' ><span class='icon-wrap'></span></a>",
+ 				 nextText: "<a class='next' id='slider-next' ><span class='icon-wrap'></span></a>",
+ 				 adaptiveHeight: true,
+ 				 shrinkItems: false,
+			  });
+			});
+		attachEvents();
+        // We've just created some new elements,
+        // so let's attach the events to them
+        
+        
+	};	
+	return {
+		init: init
+	};
+})(mfaProjects);
+
+/* Wait for all elements on the page to load */
+window.addEventListener('DOMContentLoaded', app.main.init);
