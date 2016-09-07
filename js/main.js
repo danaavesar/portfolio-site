@@ -45,7 +45,7 @@ app.main = (function(mfaProjects){
 			});
 			
 		}
-				// attachEvents();
+		attachEvents();
 	
 	};
 
@@ -53,6 +53,13 @@ app.main = (function(mfaProjects){
 		console.log('Attaching events.');
 		$(document).ready(function(){
 			console.log("document ready");
+			  $('.slider').bxSlider({
+			  	video: true,
+			 	prevText: "<a class='prev' id='slider-prev' ><span class='icon-wrap'></span></a>",
+ 				 nextText: "<a class='next' id='slider-next' ><span class='icon-wrap'></span></a>",
+ 				 adaptiveHeight: true,
+ 				 shrinkItems: false,
+			  });
 			$('.menu .nav-diamond a').off('click').on('click', function(e){
 				var category = $(this).attr('id');
 				var categoryDiv = ".category-div-" + category;
@@ -187,22 +194,11 @@ app.main = (function(mfaProjects){
   //           top: '60px'
   //       }, 'slow');
   		//slider
-  			$(document).ready(function(){
-  				// var nav = $("<nav class='nav-circlepop'>");
-		    //     var aPrev = $("<a class='prev' id='slider-prev' >");
-		    //     var aNext = $("<a class='next' id='slider-next' >");
-		    //     nav.append(aPrev);
-		    //     nav.append(aNext);
-		        // $(".bx-wrapper").append(nav);
-			  $('.slider').bxSlider({
-			  	video: true,
-			 	prevText: "<a class='prev' id='slider-prev' ><span class='icon-wrap'></span></a>",
- 				 nextText: "<a class='next' id='slider-next' ><span class='icon-wrap'></span></a>",
- 				 adaptiveHeight: true,
- 				 shrinkItems: false,
-			  });
-			});
-		attachEvents();
+  			// $(document).ready(function(){
+  			
+			
+			// });
+		//attachEvents();
         // We've just created some new elements,
         // so let's attach the events to them
         
