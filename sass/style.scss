@@ -50,7 +50,6 @@ p{
 	margin-top: 0px;
 }
 
-
 #container {
   top: 10%;
   width: 100%;
@@ -919,7 +918,7 @@ a:hover{
 	 
    position: fixed;
    display: none;
-   margin-top: -300px; /*margin is half of the height*/
+   margin-top: -350px; /*margin is half of the height*/
    @include transition-duration($fadeTime);
    
 }
@@ -937,14 +936,44 @@ a:hover{
 	margin-top: 1200px; /*1500 is the margin of the view, then - half of the height*/
 }
 
+#info{
+     z-index: 20;
+    width: 110px;
+    margin: auto;
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 25px;
+    margin-bottom: 7px;
+}
+
+.info-icon{
+  width: 40px;
+  margin: 1px;
+}
+
+#info-div{
+	 width: 140px;
+/*    background-color: yellow;*/
+    margin-left: 8px;
+    position: relative;
+    margin-top: 30px;
+}
+#info-icons-div{
+	width: 140px;
+	text-align: center;
+	margin: auto;
+}
 #about-me{
-	position: absolute;
-    bottom: 0px;
-    left: 20px;
+/*	position: absolute;*/
+  /*  bottom: 0px;
+    left: 20px;*/
     z-index: 20;
     background-color: $menulinks; 
-    width: 100px;
+    width: 110px;
     text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 #about-me:hover{
