@@ -1091,64 +1091,106 @@ p img {
 		padding-left: 0px;
 
 	}
+	.category-wrap{
+		margin-top: 3vh;
+	}
 	#menu{
-		margin-top: -330px;
-		padding-top: 50px;
+		top: 0px;
+		margin-top: 0px;
+	}
+	.menu p {
+		line-height: 14px;
 	}
 	.container{
 		top: 550px;
 	}
+	.container :nth-child(1) {
+	        @include transform(translateZ(-9px) scale(1.2) translateX(390px));
+    	top: -2105px;
+    	z-index: 51;
+	}
+	.container :nth-child(2) {
+	    @include transform(translateZ(-4px) translateX(0px) scale(.6));
+	    top: -1050px;
+	}
+	.container :nth-child(3) {
+	        top: -750px;
+    	@include transform(translateX(0px) translateZ(-3px) scale(.8));
+	}
 
 	.container :nth-child(4) {
-	    @include transform(translateZ(-4.5px) translateX(70px) scale(1.5));
+	    @include transform(translateZ(-4.5px) translateX(70px) scale(.9));
 	    top: 0px;
 	}
+	
 	.container :nth-child(5) {
-		@include transform(translateZ(-3px) scale(1.3) translateX(100px));
+		@include transform(translateZ(-3px) scale(.8) translateX(100px));
 		top: 50px;
 	}
 	.container :nth-child(6) {
-		@include transform(translateZ(0px) scale(0.27) translateX(-200px));
-	    top: -300px;
+		@include transform(translateZ(0px) scale(0.15) translateX(-800px));
+	    top: -400px;
 	}
     .container :nth-child(7) {
-    	@include transform(translateZ(-4px) translateX(-300px));
+    	@include transform(translateZ(-4px) scale(.7)translateX(-300px));
     }
     .container :nth-child(8) {
 	    @include transform(translateZ(-2px) scale(0.45) translateX(-602px));
-	    top: -800px;
+	    top: -700px;
 	}
+	.container :nth-child(9) {
+	    @include transform(translateZ(-8px) scale(1.7) translateX(400px));
+	    top: -2160px;
+	}
+
 	.container :nth-child(10) {
-	    @include transform(translateZ(-31.2px) scale(6.6) translateX(400px));
-    	top: -100px;
+	    @include transform(translateZ(-31.2px) scale(4.6) translateX(400px));
+    	top: -200px;
 	}
 	.container :nth-child(11) {
-		@include transform(translateZ(-0.3px) scale(0.24) translateX(60px));
+		@include transform(translateZ(-0.3px) scale(0.16) translateX(-180px));
 	    top: -460px;
 	}
-	.container :nth-child(14) {
-		@include transform(translateZ(-21px) translateX(-3300px));
+	.container :nth-child(12) {
+		@include transform(translateZ(-7.5px) scale(1.5) translateX(200px));
 		top: -590px;
 	}
+	.container :nth-child(13) {
+		@include transform(translateZ(-2px) translateX(0px) scale(.6));
+		top: -1200px;
+	}
+	.container :nth-child(14) {
+		@include transform(translateZ(-21px) scale(.74) translateX(-2700px));
+		top: 0px;
+	}
 	.container :nth-child(15) {
-		@include transform(scale(.9)translateZ(-15px));
+		@include transform(scale(0.7) translateZ(-15px));
 	    z-index: 28;
-	    left: -2890px;
+	    left: -1900px;
 	    top: 950px;
 	}
 	.container :nth-child(16) {
-	    @include transform(translateZ(-18px) scale(9) translateX(5px));
+	    @include transform(translateZ(-18px) scale(6) translateX(5px));
 	    top:-2403px;
 	}
+	.container :nth-child(17) {
+	    @include transform(translateZ(-1.6px) translateX(0px) scale(.7));
+	    top:-360px;
+	}
+	.container :nth-child(18) {
+	    @include transform(translateZ(-1.5px) translateX(-100px) scale(.6));
+	    top:-400px;
+	}
 	.container :nth-child(19) {
-	    @include transform(translateZ(-3px) scale(.9)translateX(40%));
-	    top:-30px;
+	    @include transform(translateZ(-3px) scale(0.6) translateX(40%));
+	    top:-190px;
 	}
 	.container :nth-child(20) {
-	    @include transform(translateZ(-3.5px) translateX(80%) scale(.8));
+	    @include transform(translateZ(-3.5px) translateX(20%) scale(.5));
+	    top: -200px;
 	}
 	.container :nth-child(21) {
-    	@include transform(translateZ(-5px) scale(3.4) translateX(-40px));
+    	@include transform(translateZ(-5px) scale(2.4) translateX(-60px));
 	}
 	.container :nth-child(22) {
 		top: -400px;
@@ -1218,8 +1260,8 @@ p img {
 	    right: -400px;
 	}
 	#mobile-menu{
-		 width: 100px;
-	    height: 100px;
+		 width: 50px;
+	    height: 40px;
 	    z-index: 40;
 	    position: fixed;
 	    top: 0px;
