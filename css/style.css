@@ -1327,7 +1327,7 @@ p img {
 }
 
 #mobile-menu-group {
-  fill: #cc6055;
+  fill: black;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
