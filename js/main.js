@@ -44,8 +44,11 @@ app.main = (function(mfaProjects){
 				containment: "parent" 
 			});
 			
+			if(i == 17){
+				attachEvents();
+			}
 		}
-		attachEvents();
+		
 	
 	};
 
@@ -63,22 +66,24 @@ app.main = (function(mfaProjects){
 			$('.menu .nav-diamond a').off('click').on('click', function(e){
 				var category = $(this).attr('id');
 				var categoryDiv = ".category-div-" + category;
+				// console.log(categoryDiv);
 				var id= $(this).attr('id');
 				$('.' + id +'-diamond').toggleClass('open');
 				$('.' + id+'-diamond').toggleClass('close');
-			 	$(categoryDiv).slideToggle(500);
-			 	$('.'+ category).slideToggle(500);
+			 	$(categoryDiv).slideToggle(800);
+			 	$('.'+ category).slideToggle(800);
 			});
 
-			$('.project-section .nav-diamond a').off('click').on('click', function(e){
+			$('.smooth').off('click').on('click', function(e){
 
-				var button = $(e.target);
-				 $par = $(e.target).parents().eq(1);
-				 $content = $par.prev();
-				 console.log($content);
-			    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-	    		if ($('.nav-diamond a').hasClass('up')){
-	    			var height = $content.height();
+				 var par = $(this).parents().eq(0);
+				 var content = par.prev();
+				  // console.log(content);
+				 content.slideToggle(500);
+			    
+	    		if ($(this).hasClass('up')){
+	    			console.log(this + " has class up so im scrolling");
+	    			var height = content.height();
 		    		currentScrollPosition = $('#parallax').scrollTop();
 		    		$('#parallax').animate({
 		    			scrollTop: (currentScrollPosition - height)
@@ -86,10 +91,8 @@ app.main = (function(mfaProjects){
 	    		}
 	    		$(this).toggleClass('down');
 			 	$(this).toggleClass('up');
-			 	var height = $content.height();
-
-			 	
-			 	 $content.slideToggle(1000);
+			 
+			 	 
 
 			})
 
