@@ -1017,9 +1017,9 @@ a:hover {
 }
 
 #about-div #left p {
-  width: 227px;
+  max-width: 227px;
   display: inline-block;
-  left: 240px;
+  left: 0px;
   top: 50px;
   text-align: center;
   position: absolute;
@@ -1039,7 +1039,7 @@ a:hover {
 
 #right {
   text-align: center;
-  width: 400px;
+  max-width: 400px;
   top: 290px;
 }
 
@@ -1117,7 +1117,7 @@ a:hover {
 #icons {
   text-align: center;
   top: 150px;
-  left: 100px;
+  left: 8px;
 }
 
 #icons a {
@@ -1307,7 +1307,7 @@ p img {
 }
 
 #close-div {
-  left: 500px;
+  right: -500px;
   top: -10px;
 }
 
@@ -1329,6 +1329,10 @@ p img {
 #mobile-menu-group {
   fill: black;
 }
+
+ #stuff-left{
+    left: 20%;
+  }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .category-section {
@@ -1570,16 +1574,20 @@ p img {
   }
 
   #about-div #left p {
-    width: 227px;
-    left: 170px;
+    max-width: 195px;
+    left: 0px;
     top: 20px;
     text-align: center;
     font-size: 16px;
   }
 
+  #about-div #right p{
+    font-size: 16px;
+  }
+
   #icons {
-    top: 120px;
-    left: 90px;
+    top: 130px;
+    left: 8px;
   }
 
   #left svg {
@@ -1602,6 +1610,7 @@ p img {
 
   #right {
     top: 250px;
+    max-width: 350px;
   }
 
   #skills-bar {
@@ -1615,7 +1624,7 @@ p img {
   }
 
   .menu {
-    width: 200px;
+    width: 230px;
     height: 100vh;
     background: white;
     -webkit-box-shadow: 0 0 5px #cccccc;

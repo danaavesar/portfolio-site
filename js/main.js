@@ -112,8 +112,10 @@ app.main = (function(mfaProjects){
 				
 				$("#menu").css({'opacity': .1});
 				$("#parallax").css({'opacity': .1});
+				$("#mobile-menu").css({'opacity': .1})
 				$("#about-div").show();
 				$("#about-div").css({'opacity': 1})
+
 
 			});
 
@@ -121,6 +123,7 @@ app.main = (function(mfaProjects){
 				$("#about-div").css({'opacity': 0});
 				$("#menu").css({'opacity': 1});
 				$("#parallax").css({'opacity': 1});
+				$("#mobile-menu").css({'opacity': 1})
 				$("#about-div").hide();
 				
 			});
@@ -142,7 +145,7 @@ app.main = (function(mfaProjects){
 						right: '0px'
 					});
 					$("#mobile-menu").css({
-						right:'200px'
+						right:'230px'
 					})
 					toggle = true;
 				}else{
