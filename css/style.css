@@ -1600,8 +1600,8 @@ p img {
   }
 
   #close-div {
-    right: -165px;
-    top: 20px;
+    right: 0px;
+    top: 570px;
   }
 
   #close-div:after {
@@ -1625,7 +1625,6 @@ p img {
 
   .menu {
     width: 230px;
-    height: 100vh;
     background: white;
     -webkit-box-shadow: 0 0 5px #cccccc;
     -moz-box-shadow: 0 0 5px #cccccc;
