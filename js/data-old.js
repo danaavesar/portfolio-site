@@ -1,26 +1,41 @@
 var mfaProjects = [
 	{"#foods-great-adventure-div" : {
 		images : [
-			"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/5GMHkvlzfDo?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot1.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot18.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot31.png'/></div>",
-
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot2.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot3.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot4.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot6.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot10.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot14.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot18.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot19.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot23.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot25.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot27.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot28.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot29.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot31.png'/></div>",
-			"<div><img src='img/mfadt/foods-great-adventure/screenshot33.png'/></div>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot1.png'/></li>",
+			"<li><iframe src='https://www.youtube.com/embed/5GMHkvlzfDo' frameborder='0' allowfullscreen></iframe></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot2.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot3.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot4.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot5.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot6.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot7.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot8.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot9.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot10.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot11.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot12.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot13.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot14.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot15.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot16.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot17.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot18.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot19.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot20.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot21.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot22.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot23.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot24.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot25.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot26.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot27.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot28.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot29.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot30.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot31.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot32.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot33.png'/></li>",
+			"<li><img src='img/mfadt/foods-great-adventure/screenshot34.png'/></li>",
 
 			],
 		title: "Food's Great Adventure",
@@ -34,7 +49,7 @@ var mfaProjects = [
 	},
 	{"#splaycious-div" : {
 			images : [
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/167674101?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+				"<li><iframe src='https://player.vimeo.com/video/167674101?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>"
 			],
 			title: "Splaycious",
 			description: "An interactive, multimedia installation that allows multiple participants to collaboratively compose digital paintings with their body movements",
@@ -47,7 +62,7 @@ var mfaProjects = [
 	},
 	{"#Collaborative-painting":{
 			images:[
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/149797977?color=c9ff23&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+				"<li><iframe src='https://player.vimeo.com/video/149797977?color=c9ff23&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>"
 			],
 			title: "Colaborative Painting",
 			description: "A performative multimedia installation in which participants body pose is translated into a 'digital stroke' in a painting.",
@@ -60,9 +75,9 @@ var mfaProjects = [
 	},
 	{"#3D-pointillism-div":{
 			images: [
-				"<div><img src='img/mfadt/3d-pointillism/unity1.png'/></div>",
-				"<div><img src='img/mfadt/3d-pointillism/unity3.png'/></div>",
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/Qetw3JCUlnM?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>"
+				"<li><img src='img/mfadt/3d-pointillism/unity1.png'/></li>",
+				"<li><img src='img/mfadt/3d-pointillism/unity3.png'/></li>",
+				"<li><iframe src='https://www.youtube.com/embed/Qetw3JCUlnM?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></li>"
 
 			],
 			title:"Experiencing Pointillism",
@@ -82,12 +97,12 @@ var mfaProjects = [
 	},
 	{"#news-site-div":{
 			images : [
-				"<div><img src='img/mfadt/news-site/topics.jpg'/> </div>",
-				"<div><div class='videoWrapper'> <iframe src='https://www.youtube.com/embed/WUl5djJTivA?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div> </div>",
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/J1rREdyFL78?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div>  </div>",
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/EvNlNJ7bEng?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </div> </div>",
-				"<div><img src='img/mfadt/news-site/grammar-rotation.jpg'/> </div>",
-				"<div><img src='img/mfadt/news-site/histogram.jpg'/> </div>"
+				"<li><img src='img/mfadt/news-site/topics.jpg'/> </li>",
+				"<li> <iframe src='https://www.youtube.com/embed/WUl5djJTivA?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </li>",
+				"<li><iframe src='https://www.youtube.com/embed/J1rREdyFL78?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></iframe> </li>",
+				"<li><iframe src='https://www.youtube.com/embed/EvNlNJ7bEng?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </li>",
+				"<li><img src='img/mfadt/news-site/grammar-rotation.jpg'/> </li>",
+				"<li><img src='img/mfadt/news-site/histogram.jpg'/> </li>"
 			],
 			title: "Parse News",
 			description: "A website that finds headlines related to a keyword search and visualizes other related word associations. It searches through the RSS feeds of over 20 international English sources, then visualizes the most commonly used words associated with the keyword. It also ",
@@ -104,8 +119,8 @@ var mfaProjects = [
 	},
 	{"#computer-sentiment-div":{
 			images: [
-				"<div><img src='img/mfadt/computer-sentiment/screen-shot.png'/></div>",
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/SOvp9lsOfCc?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>"
+				"<li><img src='img/mfadt/computer-sentiment/screen-shot.png'/></li>",
+				"<li><iframe src='https://www.youtube.com/embed/SOvp9lsOfCc?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></li>"
 			],
 			title: "Document Sentiment Visualization",
 			description: "This project visualizes the 'negative', 'positive', and 'neutral' sentiment of words in text documents on your computer. The user drags their mouse on the canvas and paints on all the words inside txt documents on their computer. The colors of each word correspond to different sentiments.",
@@ -122,7 +137,7 @@ var mfaProjects = [
 	},
 	{"#bottle-it-up-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/qAKPweaPNmQ?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>"
+				"<li><iframe src='https://www.youtube.com/embed/qAKPweaPNmQ?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></li>"
 			],
 			title: "Bottle it Up",
 			description: "An interactive bottle for people to record, listen, and share stories.",
@@ -139,7 +154,7 @@ var mfaProjects = [
 	},
 	{"#earthquake-visualization-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/S4jBII7jb_Y?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </div> </div>"
+				"<li><iframe src='https://www.youtube.com/embed/S4jBII7jb_Y?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </li>"
 			],
 			title: "Earthquake Data Vis",
 			description:"An interactive data visualization of earthquakes around the world from the past 30 days.",
@@ -154,7 +169,7 @@ var mfaProjects = [
 	},
 	{"#all-about-that-base-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/120242050?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>  </div>"
+				"<li><iframe width='640' height='360' src='https://player.vimeo.com/video/120242050?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </li>"
 			],
 			title: "All About that Base",
 			description:"A fun animation inspired by New York.",
@@ -172,7 +187,7 @@ var mfaProjects = [
 	},
 	{"#circle-of-life-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/108282634?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+				"<li><iframe width='640' height='360' src='https://player.vimeo.com/video/108282634?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>"
 			],
 			title: "Circle of Life",
 			description:"A stop-motion piece inspired by the beautiful patterns that repeat themselves in nature",
@@ -189,7 +204,7 @@ var mfaProjects = [
 	},
 	{"#nyu-stream-trailer-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/80089213?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+				"<li><iframe width='640' height='360' src='https://player.vimeo.com/video/80089213?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>"
 			],
 			title: "NYU Stream Trailer",
 			description:"A video for professors and students at New York University to understand how they can use a new resource available for the university community, called NYU Stream",

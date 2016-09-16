@@ -272,7 +272,10 @@
 									<h1 > <%= mfaProjects[i][key]["title"]%> </h1>
 									<p> <%= mfaProjects[i][key]["description"]%> </p>
 									<ul class="slider">
-										<%=mfaProjects[i][key]["images"] %>
+										<% for(var n=0; n< mfaProjects[i][key]["images"].length; n++){%>
+											<%= mfaProjects[i][key]["images"][n] %>
+										<% } %>
+
 									</ul>
 									
 									
@@ -324,11 +327,14 @@
 		<script type="text/javascript" src="js/underscore-min.js"></script>
 		<script type="text/javascript" src="js/data.js"></script>
 		<script src="jquery.bxslider/plugins/jquery.fitvids.js"></script>
-  		<script src="jquery.bxslider/jquery.bxslider.min.js"></script>
+  		<!-- <script src="jquery.bxslider/jquery.bxslider.min.js"></script> -->
+  		<script src="js/slick.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="jquery.bxslider/jquery.bxslider.css">
+		<!-- <link rel="stylesheet" href="jquery.bxslider/jquery.bxslider.css"> -->
+		<link rel="stylesheet" href="css/slick.css">
+		<link rel="stylesheet" href="css/slick-theme.css">
 		<link rel="stylesheet" href="js/jquery-ui.css">
 		<link rel="stylesheet" href="css/jquery.ui.rotatable.css">
 	</body>

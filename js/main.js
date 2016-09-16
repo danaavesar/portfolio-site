@@ -56,12 +56,23 @@ app.main = (function(mfaProjects){
 		console.log('Attaching events.');
 		$(document).ready(function(){
 			console.log("document ready");
-			  $('.slider').bxSlider({
-			  	video: true,
-			 	prevText: "<a class='prev' id='slider-prev' ><span class='icon-wrap'></span></a>",
- 				 nextText: "<a class='next' id='slider-next' ><span class='icon-wrap'></span></a>",
- 				 adaptiveHeight: true,
- 				 shrinkItems: false,
+			  // $('.slider').bxSlider({
+			  // 	video: true,
+			 	// prevText: "<a class='prev' id='slider-prev' ><span class='icon-wrap'></span></a>",
+ 				// nextText: "<a class='next' id='slider-next' ><span class='icon-wrap'></span></a>",
+ 				// minSlides: 1,
+ 				// maxSlides: 1,
+ 				// imageWait: false
+
+			  // });
+			  $('.slider').slick({
+			  	dots: true,
+			  	arrows: true,
+			  	slidesToShow: 1,
+			  	slidesToScroll: 1,
+			  	rows: 1,
+			  	adaptiveHeight: true,
+			  	// respondTo: '.slider',
 			  });
 			$('.menu .nav-diamond a').off('click').on('click', function(e){
 				var category = $(this).attr('id');
