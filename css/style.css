@@ -1137,7 +1137,7 @@ a:hover {
 }
 
 #menu {
-  position: fixed;
+  position: absolute;
   display: none;
   margin-top: -350px;
   /*margin is half of the height*/
