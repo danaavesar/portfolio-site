@@ -139,25 +139,28 @@ app.main = (function(mfaProjects){
 		
 			});
 			var toggle = false;
-			$("#mobile-menu").off('click').on('click', function(){
-				if(toggle == false){
-					$(".menu").css({
-						right: '0px'
-					});
-					$("#mobile-menu").css({
-						right:'230px'
-					})
-					toggle = true;
-				}else{
-					$(".menu").css({
-						right: '-400px'
-					});
-					$("#mobile-menu").css({
-						right:'0px'
-					})
-					toggle = false;
-				}
-			});
+				$("#mobile-menu").off('click').on('click', function(){
+					if(toggle == false){
+						$(".menu").css({
+							right: '0px'
+						});
+						$("#mobile-menu").css({
+							right:'230px'
+						})
+						toggle = true;
+					}else{
+						$(".menu").css({
+							right: '-400px'
+						});
+						$("#mobile-menu").css({
+							right:'0px'
+						})
+						toggle = false;
+					}
+				});
+			if($(window).width() > 480){
+			
+			}
 		});
 
 		$('#parallax').scroll(function(){
