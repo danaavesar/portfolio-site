@@ -1,11 +1,7 @@
 /*------------------------------------------------*/
 // Single-Page Application
 // -----------------------
-// Let's keep working on our art gallery and add some
-// more functionality to it.
-// This lesson will also serve as an introduction
-// to the MODEL-VIEW-CONTROLLER pattern
-/*------------------------------------------------*/
+
 
 var app = app || {};
 
@@ -56,15 +52,7 @@ app.main = (function(mfaProjects){
 		console.log('Attaching events.');
 		$(document).ready(function(){
 			console.log("document ready");
-			  // $('.slider').bxSlider({
-			  // 	video: true,
-			 	// prevText: "<a class='prev' id='slider-prev' ><span class='icon-wrap'></span></a>",
- 				// nextText: "<a class='next' id='slider-next' ><span class='icon-wrap'></span></a>",
- 				// minSlides: 1,
- 				// maxSlides: 1,
- 				// imageWait: false
-
-			  // });
+		
 			  $('.slider').slick({
 			  	dots: true,
 			  	arrows: true,
@@ -131,7 +119,6 @@ app.main = (function(mfaProjects){
 			$('.menu-item').off('click').on('click', function(e){
 				 e.preventDefault();
 				var posDiv = $( $(this).attr('href') ).position().top;
-				 //$('#parallax').scrollTop(1500 + posDiv);
 				 $('#parallax').animate({
 	        		scrollTop: 1500 + posDiv
 	    		}, 700, 'easeOutQuart');
@@ -210,14 +197,6 @@ app.main = (function(mfaProjects){
 			$('#fake-menu').html(compiled(data));
 
 		}
-		// $('#container').animate({
-  //           top: '60px'
-  //       }, 'slow');
-  		//slider
-  			// $(document).ready(function(){
-  			
-			
-			// });
 		//attachEvents();
         // We've just created some new elements,
         // so let's attach the events to them
