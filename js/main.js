@@ -52,6 +52,7 @@ app.main = (function(mfaProjects){
 		console.log('Attaching events.');
 		$(document).ready(function(){
 			console.log("document ready");
+				$( 'a[href^="http://"]' ).attr( 'target','_blank' );
 		
 			  $('.slider').slick({
 			  	dots: true,
