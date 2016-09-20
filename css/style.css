@@ -25,7 +25,9 @@ html, body {
   font-color: black;
   overflow-x: hidden;
 }
-
+.header{
+  padding: 10px;
+}
 .header p {
   margin-bottom: 0px;
 }
@@ -35,7 +37,8 @@ html, body {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 25px;
+  line-height: 30px;
 }
 
 p {
@@ -382,7 +385,7 @@ p {
 .category-section {
   /*  width: 98%;*/
   width: 100%;
-  padding-left: 200px;
+  padding-right: 230px;
   /*   left: 0;*/
   right: 0;
   margin: auto;
@@ -404,6 +407,7 @@ p {
   -o-transition: height 2s;
   transition: height 2s;
   padding-bottom: 0px;
+  margin-left: 1px;
 }
 
 .project-section .content {
@@ -437,12 +441,14 @@ p {
   font-size: 18px;
   line-height: 28px;
   margin-top: 0px;
+  text-align: center;
 }
 
 .h {
   margin-top: 20px;
   margin-bottom: 5px;
   font-weight: bold;
+  text-align: center;
 }
 
 .links {
@@ -1157,7 +1163,8 @@ a:hover {
 .menu {
   width: 200px;
   height: 600px;
-  float: left;
+  float: right;
+  right: 0px;
   padding: 10px;
   top: 50%;
   z-index: 50;
@@ -1655,10 +1662,11 @@ p img {
     transition-duration: 1s;
   }
 }
-.slick-slider{
+.slider{
   padding: 0px;
 }
 .slick-slide img{
+  /*max-width: 800px;*/
   width: 100%;
 }
 .videoWrapper{
@@ -1672,6 +1680,28 @@ p img {
   top: 0;
   left: 0;
   width: 100%;
+  /*max-width: 800px;*/
   height: 100%;
 }
+
+@media (min-width: 1000px) {
+  .project-title-container{
+    float: left;
+    max-width: 250px;
+    padding: 20px;
+    text-align: center;
+
+  }
+  .slick-dots{
+    margin-bottom: 0px;
+  }
+
+  .slider{
+    overflow: hidden;
+  }
+}
+
+
+  
+ 
 

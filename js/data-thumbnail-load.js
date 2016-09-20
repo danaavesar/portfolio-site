@@ -1,41 +1,26 @@
 var mfaProjects = [
 	{"#foods-great-adventure-div" : {
 		images : [
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot1.png'/></li>",
-			"<li><iframe src='https://www.youtube.com/embed/5GMHkvlzfDo' frameborder='0' allowfullscreen></iframe></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot2.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot3.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot4.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot5.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot6.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot7.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot8.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot9.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot10.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot11.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot12.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot13.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot14.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot15.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot16.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot17.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot18.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot19.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot20.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot21.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot22.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot23.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot24.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot25.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot26.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot27.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot28.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot29.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot30.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot31.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot32.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot33.png'/></li>",
-			"<li><img src='img/mfadt/foods-great-adventure/screenshot34.png'/></li>",
+			"<div><div class='youtube-player' data-id='5GMHkvlzfDo'></div></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot1.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot18.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot31.png'/></div>",
+
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot2.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot3.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot4.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot6.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot10.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot14.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot18.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot19.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot23.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot25.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot27.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot28.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot29.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot31.png'/></div>",
+			"<div><img src='img/mfadt/foods-great-adventure/screenshot33.png'/></div>",
 
 			],
 		title: "Food's Great Adventure",
@@ -49,10 +34,10 @@ var mfaProjects = [
 	},
 	{"#splaycious-div" : {
 			images : [
-				"<li><iframe src='https://player.vimeo.com/video/167674101?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>"
+				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/167674101?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
 			],
 			title: "Splaycious",
-			description: "An interactive, multimedia installation that allows multiple participants to collaboratively compose digital paintings with their body movements",
+			description: "An interactive, multimedia installation using ground projection and a Microsoft Kinect, that allows multiple participants to collaboratively compose digital paintings with their body movements",
 			basics: {"Project site": "<a class='links' href='http://splaycious.com' target='_blank'> Project site </a> &nbsp | &nbsp <a target='_blank' href='https://github.com/danaavesar/abstract-expressionist/tree/master/pollock-kinect-ofxCv'> Code</a> &nbsp | &nbsp Spring 2016 Thesis 2", "Built with" : "Built with: openFrameworks", "role":"Design, Development, Illustration, Concept" },
 			concept: "This project is inspired by the movement of abstract expressionism, in which art represents non tangible concepts such as feelings and experiences. In this installation, people's movements and interactions with each other affect the visual footprints that get 'painted' on the 'canvas'. It was designed for children ages 5-8 as a playful interactive piece that still makes clear the concepts behind the revolutionary abstract expressionist art movement.",
 			process: "On my <a target='_blank' href='http://danaavesar-thesis2.tumblr.com/'>process blog </a> you can see some of the prototypes I built that explore this concept of abstract expressionists. Originally I had designed an Ipad app, and then opted for a more kinetic experience that takes advantage of space, inspired by the physical experience of going to a museum to view art. In future iterations, I would like to implement some of the other prototypes I created that create further collaborations between people in the space, such as making shapes together with their movements. </a>",
@@ -62,7 +47,7 @@ var mfaProjects = [
 	},
 	{"#Collaborative-painting":{
 			images:[
-				"<li><iframe src='https://player.vimeo.com/video/149797977?color=c9ff23&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>"
+				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/149797977?color=c9ff23&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
 			],
 			title: "Colaborative Painting",
 			description: "A performative multimedia installation in which participants body pose is translated into a 'digital stroke' in a painting.",
@@ -75,9 +60,9 @@ var mfaProjects = [
 	},
 	{"#3D-pointillism-div":{
 			images: [
-				"<li><img src='img/mfadt/3d-pointillism/unity1.png'/></li>",
-				"<li><img src='img/mfadt/3d-pointillism/unity3.png'/></li>",
-				"<li><iframe src='https://www.youtube.com/embed/Qetw3JCUlnM?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></li>"
+				"<div><img src='img/mfadt/3d-pointillism/unity1.png'/></div>",
+				"<div><img src='img/mfadt/3d-pointillism/unity3.png'/></div>",
+				"<div><div class='youtube-player' data-id='Qetw3JCUlnM'></div></div>"
 
 			],
 			title:"Experiencing Pointillism",
@@ -97,15 +82,15 @@ var mfaProjects = [
 	},
 	{"#news-site-div":{
 			images : [
-				"<li><img src='img/mfadt/news-site/topics.jpg'/> </li>",
-				"<li> <iframe src='https://www.youtube.com/embed/WUl5djJTivA?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </li>",
-				"<li><iframe src='https://www.youtube.com/embed/J1rREdyFL78?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></iframe> </li>",
-				"<li><iframe src='https://www.youtube.com/embed/EvNlNJ7bEng?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </li>",
-				"<li><img src='img/mfadt/news-site/grammar-rotation.jpg'/> </li>",
-				"<li><img src='img/mfadt/news-site/histogram.jpg'/> </li>"
+				"<div><img src='img/mfadt/news-site/topics.jpg'/> </div>",
+				"<div><div class='videoWrapper'><div class='youtube-player' data-id='WUl5djJTivA'> </div> </div>",
+				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/J1rREdyFL78?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div>  </div>",
+				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/EvNlNJ7bEng?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </div> </div>",
+				"<div><img src='img/mfadt/news-site/grammar-rotation.jpg'/> </div>",
+				"<div><img src='img/mfadt/news-site/histogram.jpg'/> </div>"
 			],
 			title: "Parse News",
-			description: "A website that finds headlines related to a keyword search and visualizes other related word associations. It searches through the RSS feeds of over 20 international English sources, then visualizes the most commonly used words associated with the keyword. It also ",
+			description: "A website that finds headlines related to a keyword search and visualizes other related word associations. It searches through the RSS feeds of over 20 international English sources, then visualizes the most commonly used words associated with the keyword. ",
 			basics: {
 				"Project site": "<a class='links' target='_blank'> Project site </a> &nbsp | &nbsp <a href='https://github.com/danaavesar/thesis'> Code</a> &nbsp | &nbsp Fall 2015 Thesis 1",
 				"Built with" : "Built with: NodeJS, Javascript, HTML, CSS", 
@@ -119,8 +104,8 @@ var mfaProjects = [
 	},
 	{"#computer-sentiment-div":{
 			images: [
-				"<li><img src='img/mfadt/computer-sentiment/screen-shot.png'/></li>",
-				"<li><iframe src='https://www.youtube.com/embed/SOvp9lsOfCc?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></li>"
+				"<div><img src='img/mfadt/computer-sentiment/screen-shot.png'/></div>",
+				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/SOvp9lsOfCc?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>"
 			],
 			title: "Document Sentiment Visualization",
 			description: "This project visualizes the 'negative', 'positive', and 'neutral' sentiment of words in text documents on your computer. The user drags their mouse on the canvas and paints on all the words inside txt documents on their computer. The colors of each word correspond to different sentiments.",
@@ -137,7 +122,7 @@ var mfaProjects = [
 	},
 	{"#bottle-it-up-div":{
 			images: [
-				"<li><iframe src='https://www.youtube.com/embed/qAKPweaPNmQ?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></li>"
+				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/qAKPweaPNmQ?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>"
 			],
 			title: "Bottle it Up",
 			description: "An interactive bottle for people to record, listen, and share stories.",
@@ -154,7 +139,7 @@ var mfaProjects = [
 	},
 	{"#earthquake-visualization-div":{
 			images: [
-				"<li><iframe src='https://www.youtube.com/embed/S4jBII7jb_Y?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </li>"
+				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/S4jBII7jb_Y?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </div> </div>"
 			],
 			title: "Earthquake Data Vis",
 			description:"An interactive data visualization of earthquakes around the world from the past 30 days.",
@@ -169,7 +154,7 @@ var mfaProjects = [
 	},
 	{"#all-about-that-base-div":{
 			images: [
-				"<li><iframe width='640' height='360' src='https://player.vimeo.com/video/120242050?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </li>"
+				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/120242050?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>  </div>"
 			],
 			title: "All About that Base",
 			description:"A fun animation inspired by New York.",
@@ -187,7 +172,7 @@ var mfaProjects = [
 	},
 	{"#circle-of-life-div":{
 			images: [
-				"<li><iframe width='640' height='360' src='https://player.vimeo.com/video/108282634?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>"
+				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/108282634?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
 			],
 			title: "Circle of Life",
 			description:"A stop-motion piece inspired by the beautiful patterns that repeat themselves in nature",
@@ -204,7 +189,7 @@ var mfaProjects = [
 	},
 	{"#nyu-stream-trailer-div":{
 			images: [
-				"<li><iframe width='640' height='360' src='https://player.vimeo.com/video/80089213?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>"
+				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/80089213?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
 			],
 			title: "NYU Stream Trailer",
 			description:"A video for professors and students at New York University to understand how they can use a new resource available for the university community, called NYU Stream",

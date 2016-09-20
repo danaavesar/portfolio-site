@@ -90,7 +90,7 @@ var mfaProjects = [
 				"<div><img src='img/mfadt/news-site/histogram.jpg'/> </div>"
 			],
 			title: "Parse News",
-			description: "A website that finds headlines related to a keyword search and visualizes other related word associations. It searches through the RSS feeds of over 20 international English sources, then visualizes the most commonly used words associated with the keyword. It also ",
+			description: "A website that finds headlines related to a keyword search and visualizes other related word associations. It searches through the RSS feeds of over 20 international English sources, then visualizes the most commonly used words associated with the keyword.",
 			basics: {
 				"Project site": "<a class='links' target='_blank'> Project site </a> &nbsp | &nbsp <a href='https://github.com/danaavesar/thesis'> Code</a> &nbsp | &nbsp Fall 2015 Thesis 1",
 				"Built with" : "Built with: NodeJS, Javascript, HTML, CSS", 
