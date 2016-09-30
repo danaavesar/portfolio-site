@@ -19,7 +19,7 @@ html, body {
   font-size: 12px;
   line-height: 16px;
   color: black;
-  /*font-family: 'PT Sans Narrow', sans-serif;*/
+  font-family: 'PT Sans Narrow', sans-serif;
   text-decoration: none;
   font-color: black;
   overflow-x: hidden;
