@@ -568,6 +568,7 @@ nav a svg {
 .nav-diamond {
   position: relative;
   cursor: pointer;
+  clear: left;
 /*  margin-top: -30px;*/
 }
 
@@ -1704,6 +1705,7 @@ p img {
 
   .slider{
     overflow: hidden;
+    min-width: 200px;
   }
 }
 
