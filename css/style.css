@@ -1706,7 +1706,7 @@ p img {
   }
 
   .slider{
-    /*overflow: hidden;*/
+    overflow: hidden;
     min-width: 200px;
   }
 }
