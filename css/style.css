@@ -1693,7 +1693,7 @@ p img {
   height: 100%;
 }
 
-/*@media (min-width: 1000px) {
+@media (min-width: 1000px) {
   .project-title-container{
     float: left;
     width: 250px;
@@ -1710,7 +1710,7 @@ p img {
     min-width: 200px;
   }
 }
-*/
+
 
   
  
