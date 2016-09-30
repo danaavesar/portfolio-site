@@ -175,6 +175,16 @@ app.main = (function(mfaProjects){
 
 		});
 
+		// console.log($(".project-title-container").height());
+		// $(".project-title-container").each(function(){
+		// 	console.log($(this).height());
+		// 	var h = $(this).height();
+		// 	$(this).css({
+		// 		"margin-top": h/4,
+		// 		"transform": "translateY(50%)"
+		// 	})
+		// });
+		
 		   
 
     	

@@ -1687,7 +1687,7 @@ p img {
 @media (min-width: 1000px) {
   .project-title-container{
     float: left;
-    max-width: 250px;
+    width: 250px;
     padding: 20px;
     text-align: center;
 
