@@ -285,18 +285,29 @@
 										<% var basics = mfaProjects[i][key]["basics"] %>
 										<div class="basics"> <%= basics[info] %></div>
 									<% } %>
-
-									
-									<h2 class="h"> Concept </h2>
-									<p class="p"> <%= mfaProjects[i][key]["concept"] %> </p>
+									<div class="line"></div>
+									<p class="p">
 									<% if(mfaProjects[i][key]["process"] != ""){%>
-										<h2 class="h"> Process </h2>
+										<span class="h">Concept</span>
+										<br>
 									<% } %>
-									<p class="p"> <%= mfaProjects[i][key]["process"] %> </p>
+										 <%= mfaProjects[i][key]["concept"] %> <!-- </p> -->
+									
+									<% if(mfaProjects[i][key]["process"] != ""){%>
+										<br><br>
+										<span class="h">Process</span>
+										<br>
+										<!-- <h2 class="h"> Process </h2> -->
+									<% } %>
+									 <%= mfaProjects[i][key]["process"] %> 
 									<% if(mfaProjects[i][key]["code"] != ""){%>
-										<h2 class="h"> Code </h2>
+										<br><br>
+										<span class="h">Code</span>
+										<br>
+										
 									<% } %>
-									<p class="p"> <%= mfaProjects[i][key]["code"] %> </p>
+									 <%= mfaProjects[i][key]["code"] %> 
+									</p>
 									
 								</div>
 								<nav class="nav-diamond">
