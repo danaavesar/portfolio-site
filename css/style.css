@@ -1182,6 +1182,12 @@ a:hover {
   padding: 10px;
   top: 50%;
   z-index: 50;
+      -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+
 }
 
 #fake-menu {
