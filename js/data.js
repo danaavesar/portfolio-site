@@ -49,7 +49,7 @@ var mfaProjects = [
 			images:[
 				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/149797977?color=c9ff23&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
 			],
-			title: "Colaborative Painting",
+			title: "Collaborative Painting",
 			description: "A performative multimedia installation in which participants body pose is translated into a 'digital stroke' in a painting.",
 			basics: {"Project site": "<a target='_blank' href='https://github.com/danaavesar/of_creativecoding_fall2015_dana_avesar/tree/master/collaborative_painting4-final'> Code</a> &nbsp | &nbsp Fall 2015 Performative Sculpture Final Project ", "Built with" : "Built with: OpenFrameworks and Microsoft Kinect", "role":"Concept, Design, Development"},
 			category: "creative-code"
@@ -156,7 +156,7 @@ var mfaProjects = [
 			images: [
 				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/120242050?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>  </div>"
 			],
-			title: "All About that Base",
+			title: "All About that Bass",
 			description:"A fun animation inspired by New York.",
 			basics:{
 				"Project site": "Major Studio 1 Fall 2014",
