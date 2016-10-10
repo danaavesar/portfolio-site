@@ -104,8 +104,9 @@ var mfaProjects = [
 	},
 	{"#computer-sentiment-div":{
 			images: [
-				"<div><img src='img/mfadt/computer-sentiment/screen-shot.png'/></div>",
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/SOvp9lsOfCc?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>"
+			"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/SOvp9lsOfCc?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>",
+				"<div><img src='img/mfadt/computer-sentiment/screen-shot.png'/></div>"
+				
 			],
 			title: "Document Sentiment Visualization",
 			description: "This project visualizes the 'negative', 'positive', and 'neutral' sentiment of words in text documents on your computer. The user drags their mouse on the canvas and paints on all the words inside txt documents on their computer. The colors of each word correspond to different sentiments.",
