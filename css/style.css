@@ -1745,6 +1745,13 @@ p img {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.tags{
+   margin-top: 30px;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 17px;
+}
+
 @media (min-width: 1000px) {
   .project-title-container{
     float: left;
