@@ -1753,6 +1753,9 @@ p img {
 }
 
 @media (min-width: 1000px) {
+  .tags{
+    margin-top: 10px;
+  }
   .project-title-container{
     float: left;
     width: 250px;
