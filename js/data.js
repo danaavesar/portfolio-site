@@ -35,6 +35,9 @@ var mfaProjects = [
 	},
 	{"#splaycious-div" : {
 			images : [
+				"<img src='img/mfadt/splaycious/1.png'>",
+				"<img src='img/mfadt/splaycious/2.png'>",
+				"<img src='img/mfadt/splaycious/wall.jpg'>",
 				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/167674101?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
 			],
 			title: "Splaycious",
