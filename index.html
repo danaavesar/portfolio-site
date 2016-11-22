@@ -20,6 +20,7 @@
 
 	<body>
 		<div class="svg-wrap">
+
 			<svg width="64" height="64" viewBox="0 0 64 64">
 				<path id="arrow-left-1" d="M46.077 55.738c0.858 0.867 0.858 2.266 0 3.133s-2.243 0.867-3.101 0l-25.056-25.302c-0.858-0.867-0.858-2.269 0-3.133l25.056-25.306c0.858-0.867 2.243-0.867 3.101 0s0.858 2.266 0 3.133l-22.848 23.738 22.848 23.738z" />
 			</svg>
@@ -66,9 +67,9 @@
 							<%=key%>
 							<%='class=menu-item'%>
 						<%='>'%>
-							<%='<p>'%>
+							
 								<%= mfaProjects[i][key]["title"]%>
-							<%='</p >' %>
+							
 						<%='</a>'%> 
 					<% } %>
 				<% } %>
@@ -92,9 +93,9 @@
 							<%=key%>
 							<%='class=menu-item'%>
 						<%='>'%>
-							<%='<p>'%>
+							
 								<%= mfaProjects[i][key]["title"]%>
-							<%='</p >' %>
+							
 						<%='</a>'%> 
 					<% } %>
 				<% } %>
@@ -118,9 +119,35 @@
 							<%=key%>
 							<%='class=menu-item'%>
 						<%='>'%>
-							<%='<p>'%>
+							
 								<%= mfaProjects[i][key]["title"]%>
-							<%='</p >' %>
+						
+						<%='</a>'%> 
+					<% } %>
+				<% } %>
+			<% } %>	
+			</div>
+			<div class="category-wrap">
+				<nav class="nav-diamond">
+					<a class="check open gdesign-diamond" id="gdesign" >
+						<span class="icon-wrap"><svg class="icon" width="28" height="28" viewBox="0 0 64 64"><use xlink:href="#x"></svg></span>
+						<div></div>
+					</a>
+											
+				</nav>
+				<p class="category"> Static Design </p>
+			</div>
+			<div class="category-div-gdesign category-div">
+			<% for(var i=0; i < mfaProjects.length; i++){ %>
+				<% for(key in mfaProjects[i]){ %>
+					<% if (mfaProjects[i][key]["category"] == "graphic-design"){ %>
+						<%='<a href=' %>
+							<%=key%>
+							<%='class=menu-item'%>
+						<%='>'%>
+						
+								<%= mfaProjects[i][key]["title"]%>
+							
 						<%='</a>'%> 
 					<% } %>
 				<% } %>
@@ -318,7 +345,7 @@
 									<% } %>
 									<div class="line"></div>
 									<p class="p">
-									<% if(mfaProjects[i][key]["process"] != ""){%>
+									<% if(mfaProjects[i][key]["concept"] != ""){%>
 										<span class="h">Concept</span>
 										<br>
 									<% } %>

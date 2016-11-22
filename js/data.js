@@ -219,5 +219,96 @@ var mfaProjects = [
 			category: "video",
 			tags: "animation, motion graphics, illustration, video production"
 		}
-	}
+	},
+	{"#eye-of-love-div":{
+			images: [
+				"<img src='img/eye-of-love/eye-of-love-catalog-62.jpg'/>",
+				"<img src='img/eye-of-love/eye-of-love-catalog-63.jpg'/>",
+				"<img src='img/eye-of-love/eye-of-love-catalog-64.jpg'/>",
+				"<img src='img/eye-of-love/eye-of-love-catalog-65.jpg'/>",
+				"<img src='img/eye-of-love/eye-of-love-catalog-66.jpg'/>",
+				"<img src='img/eye-of-love/eye-of-love-catalog-67.jpg'/>",
+				"<img src='img/eye-of-love/eye-of-love-catalog-68.jpg'/>",
+				"<img src='img/eye-of-love/eye-of-love-catalog-610.jpg'/>",
+				"<img src='img/eye-of-love/eye-of-love-catalog-611.jpg'/>",
+				"<img src='img/eye-of-love/gift-sets-horizontal.jpg'/>",
+				"<img src='img/eye-of-love/loveontherun-after-dark-spread6.jpg'/>"
+
+			],
+			title: "Eye of Love",
+			description: "Freelance design work for pheremone perfume company Eye of Love",
+			basics:{
+				"Built with" : "Adobe InDesign, Adobe Photoshop",
+				"role" : "Graphic Design, Product Photography"
+			},
+			concept: "",
+			process: "",
+			code: "",
+			category: "graphic-design",
+			tags: "graphic design, product photography"
+		}
+	},
+	{"#new-school-dance-club-div":{
+			images:[
+				"<img src='img/dance-club/dance-club-logo3.jpg'/>",
+				"<img src='img/dance-club/cover-photo1.jpg'/>",
+				"<img src='img/dance-club/cover-photo3.jpg'/>"
+			],
+			title: "Dance Club Logo",
+			description: "Design for the New School Dance Club",
+			concept: "",
+			process: "",
+			code: "",
+			category: "graphic-design",
+			tags: "graphic design, logo design"
+		}
+	},
+	{"#locksmith-logo-div":{
+			images:[
+				"<img src='img/etai/business-card.jpg'/>"
+			],
+			title: "City Locksmith business card",
+			description: "Freelance design for City Locksmith in San Diego",
+			concept: "",
+			process: "",
+			code: "",
+			category: "graphic-design",
+			tags: "graphic design, logo design"
+
+		}
+
+	},
+	{"#anat-logo-div":{
+			images:[
+				"<img src='img/anat/card-front.jpg'/>",
+				"<img src='img/anat/card-back.jpg'/>"
+			],
+			title: "Ceramic studio business card",
+			description: "Freelance design for Anat's ceramic studio",
+			concept: "",
+			process: "",
+			code: "",
+			category: "graphic-design",
+			tags: "graphic design, logo design"
+
+		}
+
+	},
+	{"#daniel-logo-div":{
+			images:[
+				"<img src='img/daniel/business-card-front.jpg'/>",
+				"<img src='img/daniel/business-card-back.jpg'/>"
+			],
+			title: "Director business card",
+			description: "Freelance design conveying that magic can be created on screen",
+			concept: "",
+			process: "",
+			code: "",
+			category: "graphic-design",
+			tags: "graphic design, logo design"
+
+		}
+
+	},
+	
 ]

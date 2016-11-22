@@ -53,17 +53,17 @@ app.main = (function(mfaProjects){
 		$(document).ready(function(){
 			// load();
 			console.log("document ready");
-				$( 'a[href^="http://"]' ).attr( 'target','_blank' );
-		
-			  $('.slider').slick({
+			$( 'a[href^="http://"]' ).attr( 'target','_blank' );
+			$('.slider').slick({
 			  	dots: true,
 			  	arrows: true,
 			  	slidesToShow: 1,
 			  	slidesToScroll: 1,
 			  	rows: 1,
 			  	adaptiveHeight: true,
-			  	// respondTo: '.slider',
-			  });
+			  	nextArrow: "<a class='slick-prev slide-prev slide-arrow'><span class='slide-icon-wrap'></span></a>",
+			  	prevArrow: "<a class='slick-next slide-next slide-arrow'><span class='slide-icon-wrap'></span></a>"
+			});
 			$('.menu .nav-diamond a').off('click').on('click', function(e){
 				var category = $(this).attr('id');
 				var categoryDiv = ".category-div-" + category;
