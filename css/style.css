@@ -1,6 +1,7 @@
 /*#796bb0*/
 @font-face {
-  src: url('https://fonts.googleapis.com/css?family=Lato');
+
+  src: url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
   font-family: 'Lato';
 
 }
@@ -22,6 +23,7 @@ html, body {
   line-height: 16px;
   color: black;
   font-family: 'Lato';
+  font-weight: 300;
   text-decoration: none;
   font-color: black;
   overflow-x: hidden;
@@ -76,6 +78,7 @@ html, body {
 }
 
 h1 {
+  font-weight: 300;
   font-size: 18px;
   line-height: 30px;
   opacity: 1;
@@ -1353,7 +1356,7 @@ a:hover {
   display: inline-block;
   vertical-align: middle;
   color: black;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 14px;
 }
 
