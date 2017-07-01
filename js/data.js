@@ -1,7 +1,27 @@
 var mfaProjects = [
+	{"#expert-invest":{
+		images : [
+			"<div class='iframe-wrap'><div id='piZ_NZgNpvI'><img src='img/mfadt/foods-great-adventure/screenshot1.png'/></div></div>",
+			"<div class='iframe-wrap'><div id='D773rzJk1FA'></div></div>",
+			"<div class='iframe-wrap'><div id='i9MQrnrrIxY'></div></div>",
+			"<div class='iframe-wrap'><div id='kq9cNj_MS1U'></div></div>",
+			"<div class='iframe-wrap'><div id='dNVrseWmBJg'></div></div>",
+			
+
+			],
+			title: "Expert Invest Widgets",
+			description: "Built and designed a collection of 7 economic tools for traders using live data.",
+			basics: {"Project site": "<a class='links' href='http://gsimarkets.com/widgets' target='_blank'> Project site </a>  &nbsp | &nbsp GSI Markets", "Built with" : "Built with: Javascript, PHP, HTML, CSS", "role":"Design, Development" },
+			concept: "<b>Economic Calendar</b><b>Profit Calculator</b><b>Margin and Pip Calculator</b><b>Swap Calculator</b><b>Currency Converter</b><b>Live Price Slider</b><b>Technical Signals</b>",
+			process: "",
+			code: "",
+			category: "Web",
+			tags: "web development, graphic design, UI/UX"
+		}
+	},
 	{"#foods-great-adventure-div" : {
 		images : [
-			"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/5GMHkvlzfDo?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>",
+			"<div class='iframe-wrap'><div id='5GMHkvlzfDo'></div></div>",
 			"<div><img src='img/mfadt/foods-great-adventure/screenshot1.png'/></div>",
 			"<div><img src='img/mfadt/foods-great-adventure/screenshot18.png'/></div>",
 			"<div><img src='img/mfadt/foods-great-adventure/screenshot31.png'/></div>",
@@ -33,66 +53,12 @@ var mfaProjects = [
 		tags: "web design, front-end web, back-end web, UX/UI design, illustration"
 		}
 	},
-	{"#splaycious-div" : {
-			images : [
-				"<img src='img/mfadt/splaycious/1.png'>",
-				"<img src='img/mfadt/splaycious/2.png'>",
-				"<img src='img/mfadt/splaycious/wall.jpg'>",
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/167674101?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
-			],
-			title: "Splaycious",
-			description: "An interactive, multimedia installation using ground projection and a Microsoft Kinect, that allows multiple participants to collaboratively compose digital paintings with their body movements",
-			basics: {"Project site": "<a class='links' href='http://splaycious.com' target='_blank'> Project site </a> &nbsp | &nbsp <a target='_blank' href='https://github.com/danaavesar/abstract-expressionist/tree/master/pollock-kinect-ofxCv'> Code</a> &nbsp | &nbsp Spring 2016 Thesis 2", "Built with" : "Built with: openFrameworks", "role":"Design, Development, Illustration, Concept" },
-			concept: "This project is inspired by the movement of abstract expressionism, in which art represents non tangible concepts such as feelings and experiences. In this installation, people's movements and interactions with each other affect the visual footprints that get 'painted' on the 'canvas'. It was designed for children ages 5-8 as a playful interactive piece that still makes clear the concepts behind the revolutionary abstract expressionist art movement.",
-			process: "On my <a target='_blank' href='http://danaavesar-thesis2.tumblr.com/'>process blog </a> you can see some of the prototypes I built that explore this concept of abstract expressionists. Originally I had designed an Ipad app, and then opted for a more kinetic experience that takes advantage of space, inspired by the physical experience of going to a museum to view art. In future iterations, I would like to implement some of the other prototypes I created that create further collaborations between people in the space, such as making shapes together with their movements. </a>",
-			code: "This project was developed using a Microsoft Kinect and openFrameworks. It uses blob detection with ofxCV for blob tracking. You can view the code on <a target='_blank' href='https://github.com/danaavesar/abstract-expressionist/tree/master/pollock-kinect-ofxCv'>Github</a>",
-			category: "creative-code",
-			tags: "installation, creative code, projection"
-		}
-	},
-	{"#Collaborative-painting":{
-			images:[
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/149797977?color=c9ff23&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
-			],
-			title: "Collaborative Painting",
-			description: "A performative multimedia installation in which participants body pose is translated into a 'digital stroke' in a painting.",
-			basics: {"Project site": "<a target='_blank' href='https://github.com/danaavesar/of_creativecoding_fall2015_dana_avesar/tree/master/collaborative_painting4-final'> Code</a> &nbsp | &nbsp Fall 2015 Performative Sculpture Final Project ", "Built with" : "Built with: OpenFrameworks and Microsoft Kinect", "role":"Concept, Design, Development"},
-			category: "creative-code",
-			tags: "installation, creative code, projection"
-
-
-		}
-
-	},
-	{"#3D-pointillism-div":{
-			images: [
-				"<div><img src='img/mfadt/3d-pointillism/unity1.png'/></div>",
-				"<div><img src='img/mfadt/3d-pointillism/unity3.png'/></div>",
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/Qetw3JCUlnM?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>"
-
-			],
-			title:"Experiencing Pointillism",
-			description: "A 3D experience of Georges Seurat's painting 'The Channel of Gravelines', in which each color comes on one by one with a physical stroking motion of the user.",
-			basics:{
-				"Project site": "Spring 2016 Interactie Design for Museums",
-				"Built with" : "Built with: Unity, Google Cardboard, and a hacked keyboard", 
-				"role":"Group project with Sarah Page, Cathy Sun, Miyeon Kim, and Joy Peng" 
-			},
-			concept:"For this project, we wanted to experience a painting in 3 dimensions, while also learning about the way that colors function in the technique of Pointillism. We decided that the world starts gets painted color by color, in order to reveal what each color adds to the painting (such as highlights, sunlight, and shadows). We wanted to create some sort of connection between physical and digitial, so we made the user control the world through the physical act of stroking a canvas.",
-			process: "In order to accomplish this we hacked a keyboard and created touch points on the canvas that send keyboard letters as inputs to Unity. We then made each letter control a different color that appears in the 3D pointillist world. <iframe width='420' height='315'  src='https://www.youtube.com/embed/0lws691opwA?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> <img src='img/mfadt/3d-pointillism/canvas-prototype2.png'/> In unity, our first step was to figure out how to use raycasting to populate the 'land' and the 'sea' with different spheres. <img src='img/mfadt/3d-pointillism/raycast.png'/> We then began to randomize the position of the spheres and add colors that immitated the painting. To do this we targeted a specific percentage of the spheres in appropriate locations of the raycast with different colors.<iframe style='margin:auto; display: inherit; margin-top: 5px; margin-bottom: 5px' width='420' height='315'  src='https://www.youtube.com/embed/X-UzzyFkweQ?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe>",
-			code: "",
-			category: "creative-code",
-			tags: "unity, physical computing, virtual reality"
-
-		}
-
-	},
 	{"#news-site-div":{
 			images : [
 				"<div><img src='img/mfadt/news-site/topics.jpg'/> </div>",
-				"<div><div class='videoWrapper'> <iframe src='https://www.youtube.com/embed/WUl5djJTivA?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div> </div>",
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/J1rREdyFL78?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div>  </div>",
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/EvNlNJ7bEng?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </div> </div>",
+				"<div class='iframe-wrap'><div id='WUl5djJTivA'></div></div>",
+				"<div class='iframe-wrap'><div id='J1rREdyFL78'></div></div>",
+				"<div class='iframe-wrap'><div id='EvNlNJ7bEng'></div></div>",
 				"<div><img src='img/mfadt/news-site/grammar-rotation.jpg'/> </div>",
 				"<div><img src='img/mfadt/news-site/histogram.jpg'/> </div>"
 			],
@@ -112,11 +78,11 @@ var mfaProjects = [
 	},
 	{"#computer-sentiment-div":{
 			images: [
-			"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/SOvp9lsOfCc?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>",
+			"<div class='iframe-wrap'><div id='SOvp9lsOfCc'></div></div>",
 				"<div><img src='img/mfadt/computer-sentiment/screen-shot.png'/></div>"
 				
 			],
-			title: "Document Sentiment Visualization",
+			title: "Sentiment Visualization",
 			description: "This project visualizes the 'negative', 'positive', and 'neutral' sentiment of words in text documents on your computer. The user drags their mouse on the canvas and paints on all the words inside txt documents on their computer. The colors of each word correspond to different sentiments.",
 			basics: {
 				"Project site": "<a href='https://github.com/danaavesar/thesis'> Code</a> &nbsp | &nbsp Javascript Fall 2015",
@@ -131,9 +97,67 @@ var mfaProjects = [
 
 		}
 	},
+	{"#splaycious-div" : {
+			images : [
+			"<div><div class='videoWrapper'><iframe id='splaycious-vid' class='vimeoPlayer' src='https://player.vimeo.com/video/167674101?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>",
+				"<img src='img/mfadt/splaycious/1.png'>",
+				"<img src='img/mfadt/splaycious/2.png'>",
+				"<img src='img/mfadt/splaycious/wall.jpg'>",
+				
+			],
+			title: "Splaycious",
+			description: "An interactive, multimedia installation using ground projection and a Microsoft Kinect, that allows multiple participants to collaboratively compose digital paintings with their body movements",
+			basics: {"Project site": "<a class='links' href='http://splaycious.com' target='_blank'> Project site </a> &nbsp | &nbsp <a target='_blank' href='https://github.com/danaavesar/abstract-expressionist/tree/master/pollock-kinect-ofxCv'> Code</a> &nbsp | &nbsp Spring 2016 Thesis 2", "Built with" : "Built with: openFrameworks", "role":"Design, Development, Illustration, Concept" },
+			concept: "This project is inspired by the movement of abstract expressionism, in which art represents non tangible concepts such as feelings and experiences. In this installation, people's movements and interactions with each other affect the visual footprints that get 'painted' on the 'canvas'. It was designed for children ages 5-8 as a playful interactive piece that still makes clear the concepts behind the revolutionary abstract expressionist art movement.",
+			process: "On my <a target='_blank' href='http://danaavesar-thesis2.tumblr.com/'>process blog </a> you can see some of the prototypes I built that explore this concept of abstract expressionists. Originally I had designed an Ipad app, and then opted for a more kinetic experience that takes advantage of space, inspired by the physical experience of going to a museum to view art. In future iterations, I would like to implement some of the other prototypes I created that create further collaborations between people in the space, such as making shapes together with their movements. </a>",
+			code: "This project was developed using a Microsoft Kinect and openFrameworks. It uses blob detection with ofxCV for blob tracking. You can view the code on <a target='_blank' href='https://github.com/danaavesar/abstract-expressionist/tree/master/pollock-kinect-ofxCv'>Github</a>",
+			category: "creative-code",
+			tags: "installation, creative code, projection"
+		}
+	},
+	{"#Collaborative-painting":{
+			images:[
+				"<div><div class='videoWrapper'><iframe id='colab-vid' class='vimeoPlayer' src='https://player.vimeo.com/video/149797977?color=c9ff23&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+			],
+			title: "Collaborative Painting",
+			description: "A performative multimedia installation in which participants body pose is translated into a 'digital stroke' in a painting.",
+			basics: {"Project site": "<a target='_blank' href='https://github.com/danaavesar/of_creativecoding_fall2015_dana_avesar/tree/master/collaborative_painting4-final'> Code</a> &nbsp | &nbsp Fall 2015 Performative Sculpture Final Project ", "Built with" : "Built with: OpenFrameworks and Microsoft Kinect", "role":"Concept, Design, Development"},
+			category: "creative-code",
+			tags: "installation, creative code, projection"
+
+
+		}
+
+	},
+	{"#3D-pointillism-div":{
+			images: [
+				"<div class='iframe-wrap'><div id='Qetw3JCUlnM'></div></div>",
+				"<div><img src='img/mfadt/3d-pointillism/unity1.png'/></div>",
+				"<div><img src='img/mfadt/3d-pointillism/unity3.png'/></div>",
+				
+
+			],
+			title:"Experiencing Pointillism",
+			description: "A 3D experience of Georges Seurat's painting 'The Channel of Gravelines', in which each color comes on one by one with a physical stroking motion of the user.",
+			basics:{
+				"Project site": "Spring 2016 Interactie Design for Museums",
+				"Built with" : "Built with: Unity, Google Cardboard, and a hacked keyboard", 
+				"role":"Group project with Sarah Page, Cathy Sun, Miyeon Kim, and Joy Peng" 
+			},
+			concept:"For this project, we wanted to experience a painting in 3 dimensions, while also learning about the way that colors function in the technique of Pointillism. We decided that the world starts gets painted color by color, in order to reveal what each color adds to the painting (such as highlights, sunlight, and shadows). We wanted to create some sort of connection between physical and digitial, so we made the user control the world through the physical act of stroking a canvas.",
+			process: "In order to accomplish this we hacked a keyboard and created touch points on the canvas that send keyboard letters as inputs to Unity. We then made each letter control a different color that appears in the 3D pointillist world. <iframe width='420' height='315'  src='https://www.youtube.com/embed/0lws691opwA?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> <img src='img/mfadt/3d-pointillism/canvas-prototype2.png'/> In unity, our first step was to figure out how to use raycasting to populate the 'land' and the 'sea' with different spheres. <img src='img/mfadt/3d-pointillism/raycast.png'/> We then began to randomize the position of the spheres and add colors that immitated the painting. To do this we targeted a specific percentage of the spheres in appropriate locations of the raycast with different colors.<iframe style='margin:auto; display: inherit; margin-top: 5px; margin-bottom: 5px' width='420' height='315'  src='https://www.youtube.com/embed/X-UzzyFkweQ?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe>",
+			code: "",
+			category: "creative-code",
+			tags: "unity, physical computing, virtual reality"
+
+		}
+
+	},
+	
+	
 	{"#bottle-it-up-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/qAKPweaPNmQ?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe></div></div>"
+				"<div class='iframe-wrap'><div id='qAKPweaPNmQ'></div></div>"
 			],
 			title: "Bottle it Up",
 			description: "An interactive bottle for people to record, listen, and share stories.",
@@ -151,7 +175,7 @@ var mfaProjects = [
 	},
 	{"#earthquake-visualization-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://www.youtube.com/embed/S4jBII7jb_Y?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe> </div> </div>"
+				"<div class='iframe-wrap'><div id='S4jBII7jb_Y'></div></div>"
 			],
 			title: "Earthquake Data Vis",
 			description:"An interactive data visualization of earthquakes around the world from the past 30 days.",
@@ -167,7 +191,7 @@ var mfaProjects = [
 	},
 	{"#all-about-that-base-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/120242050?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>  </div>"
+				"<div><div class='videoWrapper'><iframe id='bass-vid' src='https://player.vimeo.com/video/120242050?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
 			],
 			title: "All About that Bass",
 			description:"A fun animation inspired by New York.",
@@ -186,7 +210,7 @@ var mfaProjects = [
 	},
 	{"#circle-of-life-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/108282634?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+				"<div><div class='videoWrapper'><iframe id='circle-life-vid' src='https://player.vimeo.com/video/108282634?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
 			],
 			title: "Circle of Life",
 			description:"A stop-motion piece inspired by the beautiful patterns that repeat themselves in nature",
@@ -204,7 +228,7 @@ var mfaProjects = [
 	},
 	{"#nyu-stream-trailer-div":{
 			images: [
-				"<div><div class='videoWrapper'><iframe src='https://player.vimeo.com/video/80089213?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+				"<div><div class='videoWrapper'><iframe id='nyu-vid' src='https://player.vimeo.com/video/80089213?color=ffffff&title=0&byline=0&portrait=0' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
 			],
 			title: "NYU Stream Trailer",
 			description:"A video for professors and students at New York University to understand how they can use a new resource available for the university community, called NYU Stream",
@@ -219,96 +243,97 @@ var mfaProjects = [
 			category: "video",
 			tags: "animation, motion graphics, illustration, video production"
 		}
-	},
-	{"#eye-of-love-div":{
-			images: [
-				"<img src='img/eye-of-love/eye-of-love-catalog-62.jpg'/>",
-				"<img src='img/eye-of-love/eye-of-love-catalog-63.jpg'/>",
-				"<img src='img/eye-of-love/eye-of-love-catalog-64.jpg'/>",
-				"<img src='img/eye-of-love/eye-of-love-catalog-65.jpg'/>",
-				"<img src='img/eye-of-love/eye-of-love-catalog-66.jpg'/>",
-				"<img src='img/eye-of-love/eye-of-love-catalog-67.jpg'/>",
-				"<img src='img/eye-of-love/eye-of-love-catalog-68.jpg'/>",
-				"<img src='img/eye-of-love/eye-of-love-catalog-610.jpg'/>",
-				"<img src='img/eye-of-love/eye-of-love-catalog-611.jpg'/>",
-				"<img src='img/eye-of-love/gift-sets-horizontal.jpg'/>",
-				"<img src='img/eye-of-love/loveontherun-after-dark-spread6.jpg'/>"
+	}
+	// {"#eye-of-love-div":{
+	// 		images: [
+	// 			"<img src='img/eye-of-love/eye-of-love-catalog-62.jpg'/>",
+	// 			"<img src='img/eye-of-love/eye-of-love-catalog-63.jpg'/>",
+	// 			"<img src='img/eye-of-love/eye-of-love-catalog-64.jpg'/>",
+	// 			"<img src='img/eye-of-love/eye-of-love-catalog-65.jpg'/>",
+	// 			"<img src='img/eye-of-love/eye-of-love-catalog-66.jpg'/>",
+	// 			"<img src='img/eye-of-love/eye-of-love-catalog-67.jpg'/>",
+	// 			"<img src='img/eye-of-love/eye-of-love-catalog-68.jpg'/>",
+	// 			"<img src='img/eye-of-love/eye-of-love-catalog-610.jpg'/>",
+	// 			"<img src='img/eye-of-love/eye-of-love-catalog-611.jpg'/>",
+	// 			"<img src='img/eye-of-love/gift-sets-horizontal.jpg'/>",
+	// 			"<img src='img/eye-of-love/loveontherun-after-dark-spread6.jpg'/>"
 
-			],
-			title: "Eye of Love",
-			description: "Freelance design work for pheremone perfume company Eye of Love",
-			basics:{
-				"Built with" : "Adobe InDesign, Adobe Photoshop",
-				"role" : "Graphic Design, Product Photography"
-			},
-			concept: "",
-			process: "",
-			code: "",
-			category: "graphic-design",
-			tags: "graphic design, product photography"
-		}
-	},
-	{"#new-school-dance-club-div":{
-			images:[
-				"<img src='img/dance-club/dance-club-logo3.jpg'/>",
-				"<img src='img/dance-club/cover-photo1.jpg'/>",
-				"<img src='img/dance-club/cover-photo3.jpg'/>"
-			],
-			title: "Dance Club Logo",
-			description: "Design for the New School Dance Club",
-			concept: "",
-			process: "",
-			code: "",
-			category: "graphic-design",
-			tags: "graphic design, logo design"
-		}
-	},
-	{"#locksmith-logo-div":{
-			images:[
-				"<img src='img/etai/business-card.jpg'/>"
-			],
-			title: "City Locksmith business card",
-			description: "Freelance design for City Locksmith in San Diego",
-			concept: "",
-			process: "",
-			code: "",
-			category: "graphic-design",
-			tags: "graphic design, logo design"
+	// 		],
+	// 		title: "Eye of Love",
+	// 		description: "Freelance design work for pheremone perfume company Eye of Love",
+	// 		basics:{
+	// 			"Built with" : "Adobe InDesign, Adobe Photoshop",
+	// 			"role" : "Graphic Design, Product Photography"
+	// 		},
+	// 		concept: "",
+	// 		process: "",
+	// 		code: "",
+	// 		category: "graphic-design",
+	// 		tags: "graphic design, product photography"
+	// 	}
+	// },
+	// {"#new-school-dance-club-div":{
+	// 		images:[
+	// 			"<img src='img/dance-club/dance-club-logo3.jpg'/>",
+	// 			"<img src='img/dance-club/cover-photo1.jpg'/>",
+	// 			"<img src='img/dance-club/cover-photo3.jpg'/>"
+	// 		],
+	// 		title: "Dance Club Logo",
+	// 		description: "Design for the New School Dance Club",
+	// 		concept: "",
+	// 		process: "",
+	// 		code: "",
+	// 		category: "graphic-design",
+	// 		tags: "graphic design, logo design"
+	// 	}
+	// },
+	// {"#locksmith-logo-div":{
+	// 		images:[
+	// 			"<img src='img/etai/business-card.jpg'/>"
+	// 		],
+	// 		title: "City Locksmith business card",
+	// 		description: "Freelance design for City Locksmith in San Diego",
+	// 		concept: "",
+	// 		process: "",
+	// 		code: "",
+	// 		category: "graphic-design",
+	// 		tags: "graphic design, logo design"
 
-		}
+	// 	}
 
-	},
-	{"#anat-logo-div":{
-			images:[
-				"<img src='img/anat/card-front.jpg'/>",
-				"<img src='img/anat/card-back.jpg'/>"
-			],
-			title: "Ceramic studio business card",
-			description: "Freelance design for Anat's ceramic studio",
-			concept: "",
-			process: "",
-			code: "",
-			category: "graphic-design",
-			tags: "graphic design, logo design"
+	// },
+	// {"#anat-logo-div":{
+	// 		images:[
+	// 			"<img src='img/anat/card-front.jpg'/>",
+	// 			"<img src='img/anat/card-back.jpg'/>"
+	// 		],
+	// 		title: "Ceramic studio business card",
+	// 		description: "Freelance design for Anat's ceramic studio",
+	// 		concept: "",
+	// 		process: "",
+	// 		code: "",
+	// 		category: "graphic-design",
+	// 		tags: "graphic design, logo design"
 
-		}
+	// 	}
 
-	},
-	{"#daniel-logo-div":{
-			images:[
-				"<img src='img/daniel/business-card-front.jpg'/>",
-				"<img src='img/daniel/business-card-back.jpg'/>"
-			],
-			title: "Director business card",
-			description: "Freelance design conveying that magic can be created on screen",
-			concept: "",
-			process: "",
-			code: "",
-			category: "graphic-design",
-			tags: "graphic design, logo design"
+	// },
+	// {"#daniel-logo-div":{
+	// 		images:[
+	// 			"<img src='img/daniel/business-card-front.jpg'/>",
+	// 			"<img src='img/daniel/business-card-back.jpg'/>"
+	// 		],
+	// 		title: "Director business card",
+	// 		description: "Freelance design conveying that magic can be created on screen",
+	// 		concept: "",
+	// 		process: "",
+	// 		code: "",
+	// 		category: "graphic-design",
+	// 		tags: "graphic design, logo design"
 
-		}
+	// 	}
 
-	},
+	// }
+	
 	
 ]

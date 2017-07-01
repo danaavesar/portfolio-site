@@ -14,6 +14,7 @@ app.main = (function(mfaProjects){
 		console.log('Initializing app.');
 		render("start", mfaProjects);
 		render("menu", mfaProjects);
+		
 		for(var i=2; i< 18; i++){
 			var div = $("<div class='draggable'>");
 			var innerDiv = $("<div class='rotate-resizeable'>");
@@ -50,8 +51,64 @@ app.main = (function(mfaProjects){
 
 	var attachEvents = function(){
 		console.log('Attaching events.');
+		var mainPage = true;
+      
 		$(document).ready(function(){
-			// load();
+			$('#descr-container').on('click', '.nav-btns > p', function(){
+				var currentProject;
+				$('.project-description').each(function(){
+					if($(this).is(":visible")){
+						currentProject = "#"+$(this).attr('description-name');
+					};
+				})
+				console.log(currentProject)
+				if($(this).attr('id')=='next'){
+					var next = $('[link='+currentProject+']').next();
+					
+					if(next[0] == null){
+						console.log("is end");
+						next = $('[link='+currentProject+']').parent().next().next().find('p:first-child');
+					}
+					next.trigger('click');
+				}else if($(this).attr('id')=='prev'){
+					var prev = $('[link='+currentProject+']').prev();
+					if(prev[0] == null){
+						console.log("is end");
+						prev = $('[link='+currentProject+']').parent().prev().prev().find('p:last-child');
+					}
+					prev.trigger('click');
+				}
+				
+			})
+
+			$('#descr-container').off('click').on('click', '#close-project',function(){
+				$('.category-section').fadeIn();
+			 	$('#descr-container').hide();
+			 	mainPage = true;
+			})
+			$('.project-section').off('click').on('click', function(){
+			 	$('.category-section').hide();
+			 	var whichProject = $(this).attr('name');
+			 	$('#descr-container').fadeIn();
+			 	$(".project-description").hide();
+			 	var num;
+			 	
+			 	for(var i=0; i < mfaProjects.length; i++){
+			 		if(mfaProjects[i].hasOwnProperty('#'+whichProject)){
+			 			num = i;
+			 		}
+			 	}
+			 	//if it doesnt already exist, render it
+			 	if($('[description-name='+whichProject+']').length == 0){
+			 		render("descr", {value:mfaProjects[num]});
+			 	}
+			 	
+			 	$('project-description').hide();
+			 	$('[description-name='+whichProject+']').show();
+			 	$('#nav-bar').show();
+			 	mainPage = false;
+			 	$('#parallax').scrollTop(1700);
+		 	})
 			console.log("document ready");
 			$( 'a[href^="http://"]' ).attr( 'target','_blank' );
 			$('.slider').slick({
@@ -60,9 +117,9 @@ app.main = (function(mfaProjects){
 			  	slidesToShow: 1,
 			  	slidesToScroll: 1,
 			  	rows: 1,
-			  	adaptiveHeight: true,
-			  	nextArrow: "<a class='slick-prev slide-prev slide-arrow'><span class='slide-icon-wrap'></span></a>",
-			  	prevArrow: "<a class='slick-next slide-next slide-arrow'><span class='slide-icon-wrap'></span></a>"
+			  	 adaptiveHeight: true,
+			  	 nextArrow: "<a class='slick-prev slide-prev slide-arrow'><span class='slide-icon-wrap'></span></a>",
+			  	 prevArrow: "<a class='slick-next slide-next slide-arrow'><span class='slide-icon-wrap'></span></a>"
 			});
 			$('.menu .nav-diamond a').off('click').on('click', function(e){
 				var category = $(this).attr('id');
@@ -97,7 +154,6 @@ app.main = (function(mfaProjects){
 
 			})
 
-
 			$("#about-me").off('click').on('click', function(){
 				
 				$("#menu").css({'opacity': .1});
@@ -117,52 +173,73 @@ app.main = (function(mfaProjects){
 				$("#about-div").hide();
 				
 			});
-			
-			$('.menu-item').off('click').on('click', function(e){
-				 e.preventDefault();
-				var posDiv = $( $(this).attr('href') ).position().top;
-				 $('#parallax').animate({
-	        		scrollTop: 1500 + posDiv
-	    		}, 700, 'easeOutQuart');
-				 return false;
+			var menuFixPoint = 1579;
+			$('.menu-item').mouseenter( function(e){
+				if(mainPage == true){
+					 e.preventDefault();
+					 var posDiv = $( $(this).attr('link') ).position().top;
+					 $('#parallax').animate({
+		        		scrollTop: 1579 + posDiv
+		    		}, 700, 'easeOutQuart');
+					 var name = $(this).attr('link').replace('#','');
+					
+
+					 $("#"+name).find('h1').addClass('hov');
+					 return false;
+				}
 		
 			});
-			var toggle = false;
-				$("#mobile-menu").off('click').on('click', function(){
-					if(toggle == false){
-						$(".menu").css({
-							right: '0px'
-						});
-						$("#mobile-menu").css({
-							right:'230px'
-						})
-						toggle = true;
-					}else{
-						$(".menu").css({
-							right: '-400px'
-						});
-						$("#mobile-menu").css({
-							right:'0px'
-						})
-						toggle = false;
-					}
-				});
-			if($(window).width() > 480){
-			
-			}
-		});
+			$('.menu-item').mouseout( function(e){
+				if(mainPage == true){
+					var name = $(this).attr('link').replace('#','');
+				 	$("#"+name).find('h1').removeClass('hov');
+				}
+				
+			});
 
+			$('.menu-item').click(function(a){
+				a.preventDefault();
+				var name = $(this).attr('link').replace('#','');
+				console.log(name);
+				$("#"+name).trigger('click');
+			});
+
+			$('#mobile-menu').off('click').on('click', function(){
+				$('.menu').addClass('open');
+			})
+			$( ".menu" ).on( "swipeleft", function(){
+				$('.menu').removeClass('open');
+			} );
+
+		
+				
+		});
+		$(window).resize(function(){
+			if($(window).width() < 480){
+					$("#mobile-bar").show();
+				}else{
+					$("#mobile-bar").hide();
+				}
+		})
 		$('#parallax').scroll(function(){
-			if($('#parallax').scrollTop() > 1500){
+			console.log($('#parallax').scrollTop())
+			if($('#parallax').scrollTop() >= 1579){
 				$("#menu").show();
 				$("#fake-menu").hide();
+
 				if($(window).width() < 480){
-					$("#mobile-menu").show();
+					$("#mobile-bar").show();
+				}else{
+					$("#mobile-bar").hide();
 				}
+				$(".container > img").addClass('fade');
+				$(".container > p").addClass('fade');
 			}else{
+				$("#mobile-bar").hide();
 				$("#fake-menu").show();
 				$("#menu").hide();
-				$("#mobile-menu").hide();
+				$(".container > img").removeClass('fade');
+				$(".container > p").removeClass('fade');
 			}
 			if($('#parallax').scrollTop() > 10){
 				$("#scroll-down-text").fadeOut();
@@ -174,76 +251,43 @@ app.main = (function(mfaProjects){
 			}
 
 		});
-
-		// console.log($(".project-title-container").height());
-		// $(".project-title-container").each(function(){
-		// 	console.log($(this).height());
-		// 	var h = $(this).height();
-		// 	$(this).css({
-		// 		"margin-top": h/4,
-		// 		"transform": "translateY(50%)"
-		// 	})
-		// });
 		
-		   
-
-    	
-    //     function load() {
-    //     	console.log("first function");
-    //         var div, n,
-    //             v = document.getElementsByClassName("youtube-player");
-    //         for (n = 0; n < v.length; n++) {
-    //             div = document.createElement("div");
-    //             div.setAttribute("data-id", v[n].dataset.id);
-    //             div.innerHTML = labnolThumb(v[n].dataset.id);
-    //             div.onclick = labnolIframe;
-    //             v[n].appendChild(div);
-    //         }
-    //     };
- 
-    // function labnolThumb(id) {
-    //     var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
-    //         play = '<div class="play"></div>';
-    //     return thumb.replace("ID", id) + play;
-    // }
- 
-    // function labnolIframe() {
-    //     var iframe = document.createElement("iframe");
-    //     var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-    //     iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-    //     iframe.setAttribute("frameborder", "0");
-    //     iframe.setAttribute("allowfullscreen", "1");
-    //     this.parentNode.replaceChild(iframe, this);
-    // }
+		 videos()  
+		 
 
 	
 	}
 
 	var render = function(viewName, data){
 		console.log('Rendering template for ' + viewName);
-		console.log('Received data:');
+		console.log('Received data: ' + data);
 		// console.log(data);
 
 		// Load the template from the html file
 		var templateToCompile = $('#tpl-' + viewName).html();
-
 		// Attach the template to the underscore function
 		var compiled =  _.template(templateToCompile);
 
 		// Send the data and display the result
 		if(viewName == "start"){
 			$('#view').html(compiled(data));
+			
 		}else if(viewName == "menu"){
 			$('#menu').html(compiled(data));
 			$('#fake-menu').html(compiled(data));
-
+			
+		}else if(viewName == "descr"){
+			$('#descr-container').append("<div id='nav-bar'><div class='nav-btns'><p id='prev'>< Prev </p><p id='next'>Next ></p></div><div id='close-project'><span class='close-about-me fat heavy'></span></div></div>");
+			$('#descr-container').append(compiled(data));
 		}
-		//attachEvents();
-        // We've just created some new elements,
-        // so let's attach the events to them
-        
+		
         
 	};	
+
+	var videos = function(){
+
+	} //end videos
+
 	return {
 		init: init
 	};

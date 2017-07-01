@@ -10,15 +10,18 @@
 		<meta property="og:url" content="http://www.danaavesar.com" >
 		<meta property="og:image" content="img/home-danaavesar.png" >
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/slick.min.css">
-		<link rel="stylesheet" href="css/slick-theme.min.css">
+		<link rel="stylesheet" href="css/slick.css">
+		<link rel="stylesheet" href="css/slick-theme.css">
 		<link rel="stylesheet" href="css/jquery-ui.min.css">
 		<link rel="stylesheet" href="css/jquery.ui.rotatable.css">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+		<link rel="icon" type="image/x-icon" href="favicon.png">
+		
 	</head>
 
 	<body>
+		
 		<div class="svg-wrap">
 
 			<svg width="64" height="64" viewBox="0 0 64 64">
@@ -49,10 +52,11 @@
 		<div id="menu" class="menu"></div>
 
 		<script type="text/html" id="tpl-menu">
+			<img class='side-bar-logo' src='img/dana-avesar-logo2.png'/>
 			<div class="category-wrap">
 				<nav class="nav-diamond">
 					<a class="check open Web-diamond" id="Web" >
-						<span class="icon-wrap"><svg class="icon" width="28" height="28" viewBox="0 0 64 64"><use xlink:href="#x"></svg></span>
+						<span class="icon-wrap"></span>
 						<div></div>
 					</a>
 											
@@ -63,10 +67,10 @@
 			<% for(var i=0; i < mfaProjects.length; i++){ %>
 				<% for(key in mfaProjects[i]){ %>
 					<% if (mfaProjects[i][key]["category"] == "Web"){ %>
-						<%='<a href=' %>
+						<%='<p link=' %>
 							<%=key%>
 							<%='class=menu-item'%>
-						<%='>'%>
+						<%='</p>'%>
 							
 								<%= mfaProjects[i][key]["title"]%>
 							
@@ -78,18 +82,18 @@
 			<div class="category-wrap" >
 				<nav class="nav-diamond" id="cc-category-wrap">
 					<a class="check open creative-code-diamond" id="creative-code" >
-						<span class="icon-wrap"><svg class="icon" width="28" height="28" viewBox="0 0 64 64"><use xlink:href="#x"></svg></span>
+						<span class="icon-wrap"></span>
 						<div></div>
 					</a>
 											
 				</nav>
-				<p class="category"> openFrameworks/Processing/<br>Arduino/Unity </p>
+				<p class="category"> Creative Coding </p>
 			</div>
 			<div class="category-div-creative-code category-div">
 			<% for(var i=0; i < mfaProjects.length; i++){ %>
 				<% for(key in mfaProjects[i]){ %>
 					<% if (mfaProjects[i][key]["category"] == "creative-code"){ %>
-						<%='<a href=' %>
+						<%='<p link=' %>
 							<%=key%>
 							<%='class=menu-item'%>
 						<%='>'%>
@@ -104,7 +108,7 @@
 			<div class="category-wrap">
 				<nav class="nav-diamond">
 					<a class="check open video-diamond" id="video" >
-						<span class="icon-wrap"><svg class="icon" width="28" height="28" viewBox="0 0 64 64"><use xlink:href="#x"></svg></span>
+						<span class="icon-wrap"></span>
 						<div></div>
 					</a>
 											
@@ -115,7 +119,7 @@
 			<% for(var i=0; i < mfaProjects.length; i++){ %>
 				<% for(key in mfaProjects[i]){ %>
 					<% if (mfaProjects[i][key]["category"] == "video"){ %>
-						<%='<a href=' %>
+						<%='<p link=' %>
 							<%=key%>
 							<%='class=menu-item'%>
 						<%='>'%>
@@ -127,32 +131,7 @@
 				<% } %>
 			<% } %>	
 			</div>
-			<div class="category-wrap">
-				<nav class="nav-diamond">
-					<a class="check open gdesign-diamond" id="gdesign" >
-						<span class="icon-wrap"><svg class="icon" width="28" height="28" viewBox="0 0 64 64"><use xlink:href="#x"></svg></span>
-						<div></div>
-					</a>
-											
-				</nav>
-				<p class="category"> Static Design </p>
-			</div>
-			<div class="category-div-gdesign category-div">
-			<% for(var i=0; i < mfaProjects.length; i++){ %>
-				<% for(key in mfaProjects[i]){ %>
-					<% if (mfaProjects[i][key]["category"] == "graphic-design"){ %>
-						<%='<a href=' %>
-							<%=key%>
-							<%='class=menu-item'%>
-						<%='>'%>
-						
-								<%= mfaProjects[i][key]["title"]%>
-							
-						<%='</a>'%> 
-					<% } %>
-				<% } %>
-			<% } %>	
-			</div>
+			
 			<div id="info-div">
 				<p id="about-me" class="links"> About me </p>
 				<p id="info"> This website was hand <a target='blank' href='https://github.com/danaavesar/portfolio-site'>coded</a> by me with love <3 using</p> 
@@ -164,18 +143,20 @@
 			</div>
 		</script>
 					
-		
-		<div id="mobile-menu">
-			<svg id="mobile-menu-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-				<g id="mobile-menu-group">
+		<div id='mobile-bar'>
+			<img id="mobile-logo" src="img/dana_avesar_logo.png"/>
+			<div id="mobile-menu">
+				<svg id="mobile-menu-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+					<g id="mobile-menu-group">
 
-					<rect x="-1.2" y="3.9" width="66.4" height="12.1"/>
-					<rect x="-1.2" y="25.9" width="66.4" height="12.1"/>
-					<rect x="-1.2" y="47.9" width="66.4" height="12.1"/>
+						<rect x="-1.2" y="3.9" width="66.4" height="12.1"/>
+						<rect x="-1.2" y="25.9" width="66.4" height="12.1"/>
+						<rect x="-1.2" y="47.9" width="66.4" height="12.1"/>
 
-				</g>
-			</svg>
+					</g>
+				</svg>
+			</div>
 		</div>
 
 		<div id="about-div">
@@ -323,74 +304,106 @@
 							<% var sliced = key.replace("#","")%>
 							<div class="project-section parallax-layer <%= mfaProjects[i][key]['category']%>" id=<%= sliced%> name=<%= sliced%>>
 								<div class="header">
-									<div class="project-title-container">
+									<!-- <div class="project-title-container"> -->
 										<h1 > <%= mfaProjects[i][key]["title"]%> </h1>
-										<p> <%= mfaProjects[i][key]["description"]%> </p>
-										<p class="tags">  <%= mfaProjects[i][key]["tags"]%></p>
-									</div>
-									<ul class="slider">
-										<% for(var n=0; n< mfaProjects[i][key]["images"].length; n++){%>
-											<%= mfaProjects[i][key]["images"][n] %>
-										<% } %>
+									<!-- 	<p> <%= mfaProjects[i][key]["description"]%> </p> -->
+										<!-- <p class="tags">  <%= mfaProjects[i][key]["tags"]%></p> -->
+								<!-- 	</div> -->
+									<div class='thumbnail'>
 
-									</ul>
+											<%= mfaProjects[i][key]["images"][0] %>
 									
-									
-								</div>
-								<div class="content">
-									<!-- after slider -->
-									<%for(info in mfaProjects[i][key]["basics"]){ %>
-										<% var basics = mfaProjects[i][key]["basics"] %>
-										<div class="basics"> <%= basics[info] %></div>
-									<% } %>
-									<div class="line"></div>
-									<p class="p">
-									<% if(mfaProjects[i][key]["concept"] != ""){%>
-										<span class="h">Concept</span>
-										<br>
-									<% } %>
-										 <%= mfaProjects[i][key]["concept"] %> <!-- </p> -->
-									
-									<% if(mfaProjects[i][key]["process"] != ""){%>
-										<br><br>
-										<span class="h">Process</span>
-										<br>
-										<!-- <h2 class="h"> Process </h2> -->
-									<% } %>
-									 <%= mfaProjects[i][key]["process"] %> 
-									<% if(mfaProjects[i][key]["code"] != ""){%>
-										<br><br>
-										<span class="h">Code</span>
-										<br>
-										
-									<% } %>
-									 <%= mfaProjects[i][key]["code"] %> 
-									</p>
+									</div>
 									
 								</div>
-								<nav class="nav-diamond">
-										<a class="down smooth" >
-											<span class="icon-wrap"><svg class="icon" width="28" height="28" viewBox="0 0 64 64"><use xlink:href="#down-arrow"></svg></span>
-											<div></div>
-										</a>
-									
-								</nav>
+								
+								
 							</div>
 						<% } %>
 					<% } %>	
 				</div>
+				<div id='descr-container'></div>
+				
 				
 		</script>
-	
+		<script type="text/html" id="tpl-descr">
 
+						<% var key = Object.keys(value)[0] %>
+					 	<% var sliced = key.replace("#","")%>
+							<div class='project-description' description-name=<%= sliced%>>
+								<div class="project-title-container">
+										<h1 > <%= value[key]["title"]%> </h1>
+								</div>
+							 	<p> <%= value[key]["description"]%> </p>
+								<p class="tags">  <%= value[key]["tags"]%></p> 
+								<%= value[key]["images"][0] %>
+
+
+							</div> 
+						
+				
+		</script>
+		<!-- <div id='top-bar'></div> -->
+
+		
+
+	<script async src="https://www.youtube.com/iframe_api"></script>
 	  <script type="text/javascript" src="js/all-js.js"></script>
+	  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <!-- 		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/underscore-min.js"></script>
 	    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
 		<script type="text/javascript" src="js/jquery.ui.rotatable.min.js"></script>
   		<script src="js/slick.min.js"></script> -->
+  		<script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
   		 <script type="text/javascript" src="js/data.js"></script>
-	    <script type="text/javascript" src="js/main.js"></script>
+	   <script type="text/javascript" src="js/main.js"></script> 
+	   <script>
+	   			console.log('videos')
+		   var videoIds = ['piZ_NZgNpvI','D773rzJk1FA','i9MQrnrrIxY','kq9cNj_MS1U', 'dNVrseWmBJg', '5GMHkvlzfDo', 'Qetw3JCUlnM', 'WUl5djJTivA', 'J1rREdyFL78', 'EvNlNJ7bEng', 'SOvp9lsOfCc', 'qAKPweaPNmQ', 'S4jBII7jb_Y' ]
+
+	     
+
+
+      function onYouTubePlayerAPIReady() {
+      	for(var i=0; i<videoIds.length; i++){
+        new YT.Player(videoIds[i], {
+			playerVars: {
+			'autoplay': 1,
+			'loop':1,
+			'playlist': videoIds[i],
+			'rel':0,
+			'modestbranding': 1,
+			'controls': 0,
+			'showinfo':0
+			},
+			events: {
+			'onReady': onPlayerReady
+			},
+			videoId: videoIds[i]
+		});
+    	}
+      };
+
+      function onPlayerReady(event) {
+        event.target.mute();
+      }
+
+  //     var vimeoId = ['#splaycious-vid', '#colab-vid', '#bass-vid', '#circle-life-vid', '#nyu-vid']
+
+	 //      // vimeo
+	 //    for(var i=0; i<vimeoId.length; i++){
+		// var iframe = $(vimeoId[i])[0],
+		//         player = $f(iframe);
+		 
+		// 	    player.addEvent('ready', function() {
+		// 	        player.api('setVolume', 0);
+		// 	    });
+		// }
+	   </script>
+	  
+	    
+
 		
 	</body>
 </html>
