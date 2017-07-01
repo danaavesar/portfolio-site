@@ -1,7 +1,7 @@
 /*#796bb0*/
 @font-face {
   src: url('https://fonts.googleapis.com/css?family=Lato');
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato';
 
 }
 
@@ -21,7 +21,7 @@ html, body {
   font-size: 12px;
   line-height: 16px;
   color: black;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato';
   text-decoration: none;
   font-color: black;
   overflow-x: hidden;
