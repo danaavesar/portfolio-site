@@ -222,13 +222,14 @@ app.main = (function(mfaProjects){
 				}
 		})
 		if($(window).width() < 480){
-					$( "#parallax" ).on( "scrollstart", function( event ) { 
-						$('#parallax').animate({scrollTop:'1572px'},700) ;
-					 } )
+			$( "#parallax" ).on( "scrollstart", function( event ) {
+				console.log('scroll') 
+				$('#parallax').animate({scrollTop:'1572px'},700) ;
+			 } )
 					
-				}
+		}
 		$('#parallax').scroll(function(){
-			console.log($('#parallax').scrollTop())
+			//console.log($('#parallax').scrollTop())
 			if($('#parallax').scrollTop() >= 1579){
 				$("#menu").show();
 				$("#fake-menu").hide();
