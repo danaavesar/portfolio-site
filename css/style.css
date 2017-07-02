@@ -1926,11 +1926,11 @@ position: relative;
   }
 
   #mobile-menu {
-        width: 40px;
+        width: 27px;
     z-index: 40;
     position: absolute;
-    top: 4px;
-    left: 5px;
+    top: 11px;
+    left: 12px;
     background-color: white;
     -webkit-transition-duration: 1s;
     -moz-transition-duration: 1s;

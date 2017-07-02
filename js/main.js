@@ -222,7 +222,7 @@ app.main = (function(mfaProjects){
 				}
 		})
 		if($(window).width() < 480 && $('#parallax').scrollTop() < 1550){
-			$( "#parallax" ).on( "scrollstart", function( event ) {
+			$( "#parallax" ).on( "scrollstop", function( event ) {
 				console.log('scroll') 
 				$('#parallax').scrollTop(1579) ;
 			 } )
