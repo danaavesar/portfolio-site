@@ -240,6 +240,12 @@ app.main = (function(mfaProjects){
 				$("#menu").hide();
 				$(".container > img").removeClass('fade');
 				$(".container > p").removeClass('fade');
+				if($(window).width() < 480){
+					$( "#parallax" ).on( "scrollstart", function( event ) { 
+						$('#parallax').animate({scrollTop:'1572px'},700) ;
+					 } )
+					
+				}
 			}
 			if($('#parallax').scrollTop() > 10){
 				$("#scroll-down-text").fadeOut();
