@@ -221,10 +221,10 @@ app.main = (function(mfaProjects){
 					$("#mobile-bar").hide();
 				}
 		})
-		if($(window).width() < 480){
+		if($(window).width() < 480 && $('#parallax').scrollTop() < 1550){
 			$( "#parallax" ).on( "scrollstart", function( event ) {
 				console.log('scroll') 
-				$('#parallax').animate({scrollTop:'1572px'},700) ;
+				$('#parallax').scrollTop(1579) ;
 			 } )
 					
 		}
