@@ -224,7 +224,7 @@ app.main = (function(mfaProjects){
 		if($(window).width() < 480 && $('#parallax').scrollTop() < 1550){
 			$( "#parallax" ).on( "scrollstop", function( event ) {
 				console.log('scroll') 
-				$('#parallax').scrollTop(1579) ;
+				$('#parallax').animate({scrolltop: '1579px'}) ;
 			 } )
 					
 		}
