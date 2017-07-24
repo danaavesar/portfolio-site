@@ -125,11 +125,11 @@ p {
   perspective: 1px;
   overflow-y: auto;
   width: 100%;
-  -webkit-transition-duration: 1s;
+ /* -webkit-transition-duration: 1s;
   -moz-transition-duration: 1s;
   -ms-transition-duration: 1s;
   -o-transition-duration: 1s;
-  transition-duration: 1s;
+  transition-duration: 1s;*/
 }
 
 .thumbnail img{

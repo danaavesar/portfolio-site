@@ -4,7 +4,7 @@
 
 
 var app = app || {};
-
+var scroll = true;
 app.main = (function(mfaProjects){
 
 	console.log('Loading app.');
@@ -48,14 +48,15 @@ app.main = (function(mfaProjects){
 		
 	
 	};
-
+	
 	var attachEvents = function(){
 		console.log('Attaching events.');
 		var mainPage = true;
       
 		$(document).ready(function(){
-			$('#descr-container').on('click', '.nav-btns > p', function(){
+			$('#descr-container').off('click').on('click', '.nav-arrow', function(){
 				var currentProject;
+				console.log('drewwwwww')
 				$('.project-description').each(function(){
 					if($(this).is(":visible")){
 						currentProject = "#"+$(this).attr('description-name');
@@ -81,11 +82,11 @@ app.main = (function(mfaProjects){
 				
 			})
 
-			$('#descr-container').off('click').on('click', '#close-project',function(){
-				$('.category-section').fadeIn();
-			 	$('#descr-container').hide();
-			 	mainPage = true;
-			})
+			// $('#descr-container').off('click').on('click', '#close-project',function(){
+			// 	$('.category-section').fadeIn();
+			//  	$('#descr-container').hide();
+			//  	mainPage = true;
+			// })
 			$('.project-section').off('click').on('click', function(){
 			 	$('.category-section').hide();
 			 	var whichProject = $(this).attr('name');
@@ -222,10 +223,15 @@ app.main = (function(mfaProjects){
 				}
 		})
 		if($(window).width() < 480 && $('#parallax').scrollTop() < 1550){
-			$( "#parallax" ).on( "scrollstop", function( event ) {
-				console.log('scroll') 
-				$('#parallax').animate({scrolltop: '1579px'}, 1000) ;
-			 } )
+			// $( "#parallax" ).on( "scrollstart", function( event ) {
+			// 	console.log('scroll') 
+			// 	$('#parallax').animate({scrolltop: '1579px'}, 5000) ;
+			//  } )
+			if(scroll == true){
+				goToContent();
+			}
+			
+			
 					
 		}
 		$('#parallax').scroll(function(){
@@ -265,7 +271,13 @@ app.main = (function(mfaProjects){
 
 	
 	}
-
+	var goToContent = function(){
+			console.log('goToContent')
+		 $('#parallax').animate({
+		        		scrollTop: 1579 
+		    		}, 700, 'easeOutQuart');
+		 scroll = false;
+	}
 	var render = function(viewName, data){
 		console.log('Rendering template for ' + viewName);
 		console.log('Received data: ' + data);
@@ -285,7 +297,7 @@ app.main = (function(mfaProjects){
 			$('#fake-menu').html(compiled(data));
 			
 		}else if(viewName == "descr"){
-			$('#descr-container').append("<div id='nav-bar'><div class='nav-btns'><p id='prev'>< Prev </p><p id='next'>Next ></p></div><div id='close-project'><span class='close-about-me fat heavy'></span></div></div>");
+			$('#descr-container').append("<div id='nav-bar'><div class='nav-btns'><p class='nav-arrow' id='prev'>< Prev </p><p class='nav-arrow' id='next'>Next ></p></div><div id='close-project'><span class='close-about-me fat heavy'></span></div></div>");
 			$('#descr-container').append(compiled(data));
 		}
 		
