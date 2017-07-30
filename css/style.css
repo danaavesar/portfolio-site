@@ -168,7 +168,7 @@ p {
     height: 31px;
     width: 85%;
 }*/
-#nav-bar{
+.nav-bar{
     display: none;
     background: white;
     height: 70px;
@@ -2078,7 +2078,7 @@ position: relative;
     padding-left: 0px;
     padding-right: 0px;
   }
-  .menu {
+ .menu {
    /* width: 230px;*/
     background: white;
    /* -webkit-box-shadow: 0 0 5px #cccccc;
@@ -2093,12 +2093,13 @@ position: relative;
   -o-transform: translateZ(0);
   transform: translateZ(0);
   left: -100%;
-      padding-top: 36px;
+      margin-top: 50px !important;
+      height: calc(100vh - 50px) !important; 
   }
   .menu.open{
     left: 0px;
   }
-  #nav-bar{
+  .nav-bar{
     padding-left: 10px;
     padding-right: 10px;
     bottom: 0px;
@@ -2163,6 +2164,7 @@ position: relative;
     /* z-index: 40; */
     display: block;
   }
+
   .project-description{
     width: 100%;
   }

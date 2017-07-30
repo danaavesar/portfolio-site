@@ -26,8 +26,14 @@ app.main = (function(mfaProjects){
 		console.log('Attaching events.');
 		var mainPage = true;
 		$(document).ready(function(){
+			//---display the right nav-bar---//
+			if($(window).width() <= 480){
+				var navBar = '#nav-bar-mobile';
+			}else{
+				var navBar = '#nav-bar';
+			}
 			//---next and previous arrows---//
-			$('#descr-container').off('click').on('click', '.nav-arrow', function(){
+			$('.nav-bar').off('click').on('click', '.nav-arrow', function(){
 				console.log('next/prev click')
 				var currentProject;
 				$('.project-description').each(function(){
@@ -65,7 +71,7 @@ app.main = (function(mfaProjects){
 				$('.category-section').fadeIn();
 			 	$('#descr-container').hide();
 			 	mainPage = true;
-			 	$("#nav-bar").hide();
+			 	$(navBar).hide();
 			 	$('#parallax').scrollTop(1579);
 
 			})
@@ -116,7 +122,7 @@ app.main = (function(mfaProjects){
 						}
 					}
 			 	}
-			 	$('#nav-bar').show();
+			 	$(navBar).show();
 			 	mainPage = false;
 			 	$('#parallax').scrollTop(1680);
 			 	var videoIds = [];
@@ -249,10 +255,20 @@ app.main = (function(mfaProjects){
 				
 		}); //close document.ready()
 		$(window).resize(function(){
+			
 			if($(window).width() < 480){
 				$("#mobile-bar").show();
+				if(mainPage != true){
+					$("#nav-bar-mobile").show();
+					$("#nav-bar").hide();
+				}
+				
 			}else{
 				$("#mobile-bar").hide();
+				if(mainPage != true){
+					$("#nav-bar-mobile").hide();
+					$("#nav-bar").show();
+				}
 			}
 		})
 
@@ -264,7 +280,7 @@ app.main = (function(mfaProjects){
 				$("#menu").show();
 				$("#fake-menu").hide();
 				if(mainPage != true){
-					$("#nav-bar").fadeIn();
+					$(navBar).fadeIn();
 				}
 				if($(window).width() < 480){
 					$("#mobile-bar").show();
@@ -277,10 +293,10 @@ app.main = (function(mfaProjects){
 
 			}else{ //less than 1579
 				// if($(window).width() < 480 && scroll == true){
-					
+
 				// 	//goToContent();
 				// }
-				$("#nav-bar").fadeOut(100);
+				$(navBar).fadeOut(100);
 				$("#mobile-bar").hide();
 				$("#fake-menu").show();
 				$("#menu").hide();
@@ -298,123 +314,7 @@ app.main = (function(mfaProjects){
 			}
 		});
 	}//attach events end
-	// var redirect = function(){
-	// 	$('.category-section').hide();
-	// 		 	var url = window.location.href;
-
-	// 		 	var whichProject = url.substr(url.indexOf('?') + 1, url.length);
-
-	// 		 	$('#descr-container').fadeIn();
-	// 		 	$(".project-description").hide();
-	// 		 	var num;
-			 	
-	// 		 	for(var i=0; i < mfaProjects.length; i++){
-	// 		 		if(mfaProjects[i].hasOwnProperty('#'+whichProject)){
-	// 		 			num = i;
-	// 		 		}
-	// 		 	}
-	// 		 	//if it doesnt already exist, render it
-	// 		 	if($('[description-name='+whichProject+']').length == 0){
-	// 		 		render("descr", {value:mfaProjects[num]});
-	// 		 	}
-			 	
-	// 		 	$('project-description').hide();
-	// 		 	$('[description-name='+whichProject+']').show();
-	// 		 	if(whichProject == 'foods-great-adventure-div'){
-	// 		 		for(var i=2; i< 18; i++){
-	// 					var div = $("<div class='draggable'>");
-	// 					var innerDiv = $("<div class='rotate-resizeable'>");
-	// 					var img = $('<img class="imgdrag">');
-	// 					img.attr('src', 'img/mfadt/foods-great-adventure/sketches/' + i + '.jpg');
-	// 					innerDiv.append(img);
-	// 					div.append(innerDiv);
-	// 					var randomPosX; var randomPosY; var randomRotation;
-	// 					// randomPosX = ((Math.random()*830)+0);
-	// 					// randomPosY = ((Math.random()*200)+0);
-	// 					randomPosX = ((Math.random()*80)+0);
-	// 					randomPosY = ((Math.random()*200)+0);
-	// 					randomRotation = ((Math.random()*10)+-5);
-	// 					div.attr("style",'left:' + randomPosX + '%;top:' + randomPosY + 'px; -webkit-transform:rotate('+randomRotation + 'deg); transform:rotate('+randomRotation + 'deg)');
-
-	// 					$(".dragdrop").append(div);
-						
-	// 					var params = {
-	// 		    			wheelRotate: false
-	// 					}
-	// 					 $(".rotate-resizeable").resizable({aspectRatio:true, maxWidth: 350}).rotatable(params);
-	// 					 $(".draggable").draggable({
-	// 						stack: ".draggable",
-	// 						containment: "parent" 
-	// 					});
-						
-	// 					if(i == 17){
-	// 						attachEvents();
-	// 					}
-	// 				}
-	// 		 	}
-	// 		 	$('#nav-bar').show();
-	// 		 	mainPage = false;
-	// 		 	$('#parallax').scrollTop(1680);
-	// 		 	var videoIds = [];
-	// 		 	$(mfaProjects).each(function(i){
-	// 		 		if(mfaProjects[i].hasOwnProperty("#"+whichProject)){
-			 			
-	// 		 			var images = mfaProjects[i]["#"+whichProject].images;
-			 			
-			 				
-	// 		 				for(var n = 0; n<images.length; n++){
-	// 		 					if(images[n].indexOf('div id') > -1 && images[n].indexOf('THUMB-') < 0){
-	// 			 					var idStartPos = images[n].indexOf('div id') + 8;
-	// 			 					var id = images[n].substr(idStartPos,11 )
-	// 			 					videoIds.push(id);
-	// 		 					}
-	// 		 				}
-			 				
-	// 		 		}
-			 		 
-	// 		 	})
-	// 		 	console.log(videoIds)
-	// 		 	for(var i=0; i<videoIds.length; i++){
-	// 		 		var width = '100%';
-	// 		 		var height = 'auto';
-	// 		 		if(videoIds[i]=='D773rzJk1FA'){
-	// 		 			console.log('widthhh')
-	// 		 			width = '320px';
-	// 		 			height = '443px';
-	// 		 		}else if(videoIds[i] == 'i9MQrnrrIxY'){
-	// 		 			width= '320px';
- //    					height= '589px';
-	// 		 		}else if(videoIds[i] == 'n-erP_78DUA'){
-	// 		 			width= '320px';
- //    					height= '480px';
-	// 		 		}
-	// 		        new YT.Player(videoIds[i], {
-	// 		        	'width':width,
-	// 					'height':height,
-	// 					playerVars: {
-	// 					'autoplay': 0,
-	// 					'loop':1,
-	// 					'playlist': videoIds[i],
-	// 					'rel':0,
-	// 					'modestbranding': 1,
-	// 					'controls': 1,
-	// 					'showinfo':0,
-						
-	// 					},
-	// 					events: {
-	// 					'onReady': onPlayerReady
-	// 					},
-	// 					videoId: videoIds[i]
-	// 				});
-	// 			}
-	// }
-	// var goToContent = function(){
-	// 	console.log('goToContent')
-	// 	$('#parallax').animate({
-	// 	    scrollTop: 1579 
-	// 	}, 700, 'easeOutQuart');
-	// 	scroll = false;
-	// }
+	
 	var render = function(viewName, data){
 		console.log('Rendering template for ' + viewName);
 		console.log('Received data: ' + data);
@@ -435,11 +335,7 @@ app.main = (function(mfaProjects){
 	
 		}else if(viewName == "descr"){
 			
-			if($(window).width() <= 480){
-				$('body').append("<div id='nav-bar'><div class='nav-btns'><p class='nav-arrow' id='prev'>< Prev </p><div id='close-project'><span class='close-about-me fat heavy'></span></div><p class='nav-arrow' id='next'>Next ></p></div></div>");
-			}else{
-				$('body').append("<div id='nav-bar'><div class='nav-btns'><p class='nav-arrow' id='prev'>< Prev </p><p class='nav-arrow' id='next'>Next ></p></div><div id='close-project'><span class='close-about-me fat heavy'></span></div></div>");
-			}
+			
 			// $('#descr-container').append("<div id='nav-bar'><div class='nav-btns'><p class='nav-arrow' id='prev'>< Prev </p><p class='nav-arrow' id='next'>Next ></p></div><div id='close-project'><span class='close-about-me fat heavy'></span></div></div>");
 			$('#descr-container').append(compiled(data));
 		}
