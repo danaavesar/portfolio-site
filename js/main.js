@@ -26,10 +26,15 @@ app.main = (function(mfaProjects){
 		console.log('Attaching events.');
 		var mainPage = true;
 		$(document).ready(function(){
+<<<<<<< HEAD
 			//---next and previous arrows---//
 			$('#descr-container').off('click').on('click', '.nav-arrow', function(){
 				console.log('next/prev click')
+=======
+			$('#descr-container').off('click').on('click', '.nav-arrow', function(){
+>>>>>>> 44dc1af050846ca443f43e470037f5f165623cba
 				var currentProject;
+				console.log('drewwwwww')
 				$('.project-description').each(function(){
 					if($(this).is(":visible")){
 						currentProject = "#"+$(this).attr('description-name');
@@ -53,6 +58,7 @@ app.main = (function(mfaProjects){
 					prev.trigger('click');
 				}
 			})
+<<<<<<< HEAD
 			//---swipe to previous and next---//
 			$( "#parallax" ).off('swipeleft').on( "swipeleft", function(){
 				if(mainPage == false){
@@ -70,6 +76,14 @@ app.main = (function(mfaProjects){
 
 			})
 			//---click on project---//
+=======
+
+			// $('#descr-container').off('click').on('click', '#close-project',function(){
+			// 	$('.category-section').fadeIn();
+			//  	$('#descr-container').hide();
+			//  	mainPage = true;
+			// })
+>>>>>>> 44dc1af050846ca443f43e470037f5f165623cba
 			$('.project-section').off('click').on('click', function(){
 			 	$('.category-section').hide();
 			 	var whichProject = $(this).attr('name');
@@ -255,8 +269,23 @@ app.main = (function(mfaProjects){
 				$("#mobile-bar").hide();
 			}
 		})
+<<<<<<< HEAD
 
 		//---scroll events---//
+=======
+		if($(window).width() < 480 && $('#parallax').scrollTop() < 1550){
+			// $( "#parallax" ).on( "scrollstart", function( event ) {
+			// 	console.log('scroll') 
+			// 	$('#parallax').animate({scrolltop: '1579px'}, 5000) ;
+			//  } )
+			if(scroll == true){
+				goToContent();
+			}
+			
+			
+					
+		}
+>>>>>>> 44dc1af050846ca443f43e470037f5f165623cba
 		$('#parallax').scroll(function(){
 			console.log('parallax ' + $('#parallax').scrollTop())
 
@@ -302,6 +331,7 @@ app.main = (function(mfaProjects){
 	// 	$('.category-section').hide();
 	// 		 	var url = window.location.href;
 
+<<<<<<< HEAD
 	// 		 	var whichProject = url.substr(url.indexOf('?') + 1, url.length);
 
 	// 		 	$('#descr-container').fadeIn();
@@ -415,6 +445,17 @@ app.main = (function(mfaProjects){
 	// 	}, 700, 'easeOutQuart');
 	// 	scroll = false;
 	// }
+=======
+	
+	}
+	var goToContent = function(){
+			console.log('goToContent')
+		 $('#parallax').animate({
+		        		scrollTop: 1579 
+		    		}, 700, 'easeOutQuart');
+		 scroll = false;
+	}
+>>>>>>> 44dc1af050846ca443f43e470037f5f165623cba
 	var render = function(viewName, data){
 		console.log('Rendering template for ' + viewName);
 		console.log('Received data: ' + data);
@@ -434,6 +475,7 @@ app.main = (function(mfaProjects){
 			$('#fake-menu').html(compiled(data));
 	
 		}else if(viewName == "descr"){
+<<<<<<< HEAD
 			
 			if($(window).width() <= 480){
 				$('body').append("<div id='nav-bar'><div class='nav-btns'><p class='nav-arrow' id='prev'>< Prev </p><div id='close-project'><span class='close-about-me fat heavy'></span></div><p class='nav-arrow' id='next'>Next ></p></div></div>");
@@ -441,6 +483,9 @@ app.main = (function(mfaProjects){
 				$('body').append("<div id='nav-bar'><div class='nav-btns'><p class='nav-arrow' id='prev'>< Prev </p><p class='nav-arrow' id='next'>Next ></p></div><div id='close-project'><span class='close-about-me fat heavy'></span></div></div>");
 			}
 			// $('#descr-container').append("<div id='nav-bar'><div class='nav-btns'><p class='nav-arrow' id='prev'>< Prev </p><p class='nav-arrow' id='next'>Next ></p></div><div id='close-project'><span class='close-about-me fat heavy'></span></div></div>");
+=======
+			$('#descr-container').append("<div id='nav-bar'><div class='nav-btns'><p class='nav-arrow' id='prev'>< Prev </p><p class='nav-arrow' id='next'>Next ></p></div><div id='close-project'><span class='close-about-me fat heavy'></span></div></div>");
+>>>>>>> 44dc1af050846ca443f43e470037f5f165623cba
 			$('#descr-container').append(compiled(data));
 		}
 		
