@@ -789,8 +789,11 @@ position: absolute;
 .nav-btns p{
   cursor: pointer;
 }
-.nav-btns p:hover{
+.nav-btns p:active{
   color: #ccc;
+}
+.nav-btns p:hover{
+  text-decoration: underline;
 }
 nav a {
   /*  position: absolute;*/
@@ -2095,6 +2098,7 @@ position: relative;
   left: -100%;
       margin-top: 50px !important;
       height: calc(100vh - 50px) !important; 
+          box-shadow: 1px 1px 17px 0px rgba(0,0,0,.1);
   }
   .menu.open{
     left: 0px;
@@ -2167,6 +2171,9 @@ position: relative;
 
   .project-description{
     width: 100%;
+  }
+  .nav-btns p:hover{
+  text-decoration: none;
   }
 
 }

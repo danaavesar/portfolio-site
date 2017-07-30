@@ -62,6 +62,11 @@ app.main = (function(mfaProjects){
 			//---swipe to previous and next---//
 			$( "#parallax" ).off('swipeleft').on( "swipeleft", function(){
 				if(mainPage == false){
+					$('#next').trigger('click');
+				}
+			});
+			$( "#parallax" ).off('swiperight').on( "swipeleft", function(){
+				if(mainPage == false){
 					$('#prev').trigger('click');
 				}
 			});
@@ -256,7 +261,7 @@ app.main = (function(mfaProjects){
 		}); //close document.ready()
 		$(window).resize(function(){
 			
-			if($(window).width() < 480){
+			if($(window).width() <= 480){
 				$("#mobile-bar").show();
 				if(mainPage != true){
 					$("#nav-bar-mobile").show();
