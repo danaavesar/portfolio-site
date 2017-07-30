@@ -25,13 +25,14 @@ app.main = (function(mfaProjects){
 	var attachEvents = function(){
 		console.log('Attaching events.');
 		var mainPage = true;
+		//---display the right nav-bar---//
+		if($(window).width() <= 480){
+			var navBar = '#nav-bar-mobile';
+		}else{
+			var navBar = '#nav-bar';
+		}
 		$(document).ready(function(){
-			//---display the right nav-bar---//
-			if($(window).width() <= 480){
-				var navBar = '#nav-bar-mobile';
-			}else{
-				var navBar = '#nav-bar';
-			}
+			
 			//---next and previous arrows---//
 			$('.nav-bar').off('click').on('click', '.nav-arrow', function(){
 				console.log('next/prev click')
@@ -49,14 +50,36 @@ app.main = (function(mfaProjects){
 						console.log("is end");
 						next = $('[link='+currentProject+']').parent().next().next().find('p:first-child');
 					}
-					next.trigger('click');
+					if($(window).width()<= 480){
+						//slide 
+						console.log('slide')
+						
+						$("div[description-name='"+ currentProject.replace('#','')+"']").animate({
+							'margin-left':'-100%'
+						},300, function(){
+							 next.trigger('click');
+							 $("div[description-name='"+ currentProject.replace('#','')+"']").css('margin-left','0%');
+						})
+					}
+					
 				}else if($(this).attr('id')=='prev'){
 					var prev = $('[link='+currentProject+']').prev();
 					if(prev[0] == null){
 						console.log("is end");
 						prev = $('[link='+currentProject+']').parent().prev().prev().find('p:last-child');
 					}
-					prev.trigger('click');
+					if($(window).width()<= 480){
+						//slide 
+						console.log('slide')
+						
+						$("div[description-name='"+ currentProject.replace('#','')+"']").animate({
+							'margin-left':'100%'
+						},300, function(){
+							 prev.trigger('click');
+							 $("div[description-name='"+ currentProject.replace('#','')+"']").css('margin-left','0%');
+						})
+					}
+					
 				}
 			})
 			//---swipe to previous and next---//
@@ -65,7 +88,7 @@ app.main = (function(mfaProjects){
 					$('#next').trigger('click');
 				}
 			});
-			$( "#parallax" ).off('swiperight').on( "swipeleft", function(){
+			$( "#parallax" ).off('swiperight').on( "swiperight", function(){
 				if(mainPage == false){
 					$('#prev').trigger('click');
 				}
@@ -97,7 +120,22 @@ app.main = (function(mfaProjects){
 			 		render("descr", {value:mfaProjects[num]});
 			 	}
 			 	$('project-description').hide();
-			 	$('[description-name='+whichProject+']').show();
+			 	if($(window).width()<= 480){
+						//slide 
+						console.log('slide')
+						$('[description-name='+whichProject+']').css({
+							'margin-left':'100%',
+
+						})
+						$('[description-name='+whichProject+']').show();
+						$('[description-name='+whichProject+']').animate({
+							'margin-left':'0%'
+						},300)
+				}else{
+					$('[description-name='+whichProject+']').show();
+				}
+			 	
+
 			 	if(whichProject == 'foods-great-adventure-div'){
 			 		for(var i=2; i< 18; i++){
 						var div = $("<div class='draggable'>");
