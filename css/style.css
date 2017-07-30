@@ -172,7 +172,7 @@ p {
     display: none;
     background: white;
     height: 70px;
-    width: 100%;
+    width: 87%;
     top: 0px;
     position: absolute;
     padding-left: 250px;
@@ -953,7 +953,7 @@ nav a svg {
     width: 8px;
     top: 11px;
     height: 1px;
-    background: #cc6055;
+   /* background: #cc6055;*/
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     left: 7px;
@@ -965,11 +965,15 @@ nav a svg {
     width: 8px;
     top: 11px;
     height: 1px;
-    background: #cc6055;
+    /*background: #cc6055;*/
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     left: 7px;
    /* background: #a7ffff;*/
+}
+
+.menu .category-wrap .icon-wrap:after, .menu .category-wrap .icon-wrap:before{
+  background-color: #606589;
 }
 
 .menu .nav-diamond .close .icon-wrap:after{
@@ -994,6 +998,7 @@ left: 8px;
 
 .menu .nav-diamond div {
   background-color: #f0f4c8;
+  background-color: #f1e1e3;
 }
 
 .menu .nav-diamond .open div {
@@ -1004,7 +1009,10 @@ left: 8px;
   transform: scale(0.6) rotate(-45deg);
   width: 23px;
   height: 23px;
-  background-color: #e4a7aa;
+  /*background-color: #e4a7aa;
+    background-color: #ffdfd1;*/
+    /* background-color: #959bb1;
+     background-color: #f0f4c8;*/
 }
 
 
@@ -1088,7 +1096,7 @@ nav a.next {
 }
 
 a {
-  color: #796bb0;
+  color: black !important;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
@@ -1480,6 +1488,7 @@ animation: AnimationName 19s ease infinite;
     display: inline-block;
     text-align: center;
     margin: auto;
+    font-weight: 400;
     text-align: left;
     text-decoration: underline;
     /* color: #796bb0; */
@@ -2093,6 +2102,7 @@ position: relative;
     position: fixed;
     height: 48px;
     top: auto;
+    width: 100%;
   }
   .nav-btns{
     text-align: center;
