@@ -2050,8 +2050,11 @@ position: relative;
   }
 
   #about-div {
-    width: 100%;
+        width: 93%;
     position: absolute;
+    /* top: 0px; */
+    /* height: 100vh; */
+    margin-top: -278px;
   }
 
 
