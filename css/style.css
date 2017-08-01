@@ -182,6 +182,7 @@ p {
     z-index: 5000;
     margin-top: 20px;
     width: 85%;
+    max-width: 800px;
         padding-bottom: 35px;
 }
 .project-section:hover h1{
