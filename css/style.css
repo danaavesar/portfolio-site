@@ -97,14 +97,14 @@ h1 {
   opacity: 1;
   color: black;
   visibility: visible;
-  margin-bottom: 10px;
-  margin-top: 0px;
       -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
     -ms-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     transition-duration: 0.5s;
     display: inline-block;
+            margin-bottom: 1px;
+    margin-top: -5px;
 }
 
 p {
@@ -1442,7 +1442,7 @@ animation: AnimationName 19s ease infinite;
   left: 15px;
   padding: 10px;
   top: 50%;
-  z-index: 2;
+  z-index: 31;
       -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -1838,7 +1838,7 @@ position: relative;
   
 }
 
-@media (min-width: 300px) and (max-width: 480px) {
+@media (min-width: 300px) and (max-width: 700px) {
  
 
   .container :nth-child(1) {
@@ -2073,6 +2073,7 @@ position: relative;
         width: 100%;
     margin: auto;
     display: block;
+        margin-bottom: 20px;
   }
   #descr-container{
     width: 95%;

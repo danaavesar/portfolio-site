@@ -5,8 +5,12 @@
 
 var app = app || {};
 var scroll = true;
+var mainPage = true;
+var breakPointMobile = 700;
+var navBar;
 app.main = (function(mfaProjects){
-
+	var prevMobile = false;
+	var nextMobile = false;
 	console.log('Loading app.');
 
 
@@ -15,24 +19,21 @@ app.main = (function(mfaProjects){
 		render("start", mfaProjects);
 		render("menu", mfaProjects);
 		attachEvents();
-		//redirect();
-		
-
-		
-	
 	};
 	
+	var whichNavBar = function(){
+		//---display the right nav-bar---//
+		if($(window).width() <= breakPointMobile){
+			navBar = '#nav-bar-mobile';
+		}else{
+			navBar = '#nav-bar';
+		}
+	}
 	var attachEvents = function(){
 		console.log('Attaching events.');
-		var mainPage = true;
-		//---display the right nav-bar---//
-		if($(window).width() <= 480){
-			var navBar = '#nav-bar-mobile';
-		}else{
-			var navBar = '#nav-bar';
-		}
+		
 		$(document).ready(function(){
-			
+			whichNavBar();
 			//---next and previous arrows---//
 			$('.nav-bar').off('click').on('click', '.nav-arrow', function(){
 				console.log('next/prev click')
@@ -44,40 +45,44 @@ app.main = (function(mfaProjects){
 				})
 				console.log(currentProject)
 				if($(this).attr('id')=='next'){
+					nextMobile = true;
+					prevMobile = false;
 					var next = $('[link='+currentProject+']').next();
-					
 					if(next[0] == null){
 						console.log("is end");
 						next = $('[link='+currentProject+']').parent().next().next().find('p:first-child');
 					}
-					if($(window).width()<= 480){
+					if($(window).width()<= breakPointMobile){
 						//slide 
 						console.log('slide')
-						
-						$("div[description-name='"+ currentProject.replace('#','')+"']").animate({
-							'margin-left':'-100%'
-						},300, function(){
-							 next.trigger('click');
-							 $("div[description-name='"+ currentProject.replace('#','')+"']").css('margin-left','0%');
-						})
+						if(currentProject != '#nyu-stream-trailer-div'){
+							$("div[description-name='"+ currentProject.replace('#','')+"']").animate({
+								'margin-left':'-100%'
+							},300, function(){
+								 next.trigger('click');
+								 $("div[description-name='"+ currentProject.replace('#','')+"']").css('margin-left','0%');
+							})
+						}
 					}
-					
 				}else if($(this).attr('id')=='prev'){
+					nextMobile = false;
+					prevMobile = true;
 					var prev = $('[link='+currentProject+']').prev();
 					if(prev[0] == null){
 						console.log("is end");
 						prev = $('[link='+currentProject+']').parent().prev().prev().find('p:last-child');
 					}
-					if($(window).width()<= 480){
+					if($(window).width()<= breakPointMobile){
 						//slide 
 						console.log('slide')
-						
-						$("div[description-name='"+ currentProject.replace('#','')+"']").animate({
-							'margin-left':'100%'
-						},300, function(){
-							 prev.trigger('click');
-							 $("div[description-name='"+ currentProject.replace('#','')+"']").css('margin-left','0%');
-						})
+						if(currentProject != '#expert-invest'){
+							$("div[description-name='"+ currentProject.replace('#','')+"']").animate({
+								'margin-left':'100%'
+							},300, function(){
+								 prev.trigger('click');
+								 $("div[description-name='"+ currentProject.replace('#','')+"']").css('margin-left','0%');
+							})
+						}
 					}
 					
 				}
@@ -98,9 +103,10 @@ app.main = (function(mfaProjects){
 				console.log('main-page')
 				$('.category-section').fadeIn();
 			 	$('#descr-container').hide();
-			 	mainPage = true;
 			 	$(navBar).hide();
 			 	$('#parallax').scrollTop(1579);
+			 	mainPage = true;
+			 	console.log(mainPage)
 
 			})
 			//---click on project---//
@@ -120,17 +126,27 @@ app.main = (function(mfaProjects){
 			 		render("descr", {value:mfaProjects[num]});
 			 	}
 			 	$('project-description').hide();
-			 	if($(window).width()<= 480){
+			 	if($(window).width()<= breakPointMobile){
 						//slide 
-						console.log('slide')
-						$('[description-name='+whichProject+']').css({
-							'margin-left':'100%',
-
-						})
-						$('[description-name='+whichProject+']').show();
+						console.log('slide');
+						if(nextMobile){
+							$('[description-name='+whichProject+']').css({
+								'margin-left':'100%',
+								'display':'block'
+							})
+						}else if(prevMobile){
+							$('[description-name='+whichProject+']').css({
+								'margin-left':'-100%',
+								'display':'block'
+							})
+						}
+						
 						$('[description-name='+whichProject+']').animate({
-							'margin-left':'0%'
+							 'margin-left':'0%'
 						},300)
+						
+						
+						
 				}else{
 					$('[description-name='+whichProject+']').show();
 				}
@@ -298,18 +314,19 @@ app.main = (function(mfaProjects){
 				
 		}); //close document.ready()
 		$(window).resize(function(){
-			
-			if($(window).width() <= 480){
+			whichNavBar();
+			if($(window).width() <= breakPointMobile){
 				$("#mobile-bar").show();
+				$("#nav-bar").hide();
 				if(mainPage != true){
+					console.log('window resize mainpage ' + mainPage)
 					$("#nav-bar-mobile").show();
-					$("#nav-bar").hide();
 				}
-				
 			}else{
 				$("#mobile-bar").hide();
+				$("#nav-bar-mobile").hide();
 				if(mainPage != true){
-					$("#nav-bar-mobile").hide();
+					console.log('window resize mainpage ' + mainPage)
 					$("#nav-bar").show();
 				}
 			}
@@ -322,10 +339,11 @@ app.main = (function(mfaProjects){
 			if($('#parallax').scrollTop() >= 1579){
 				$("#menu").show();
 				$("#fake-menu").hide();
-				if(mainPage != true){
+				if(mainPage == false){
+					console.log(mainPage)
 					$(navBar).fadeIn();
 				}
-				if($(window).width() < 480){
+				if($(window).width() < breakPointMobile){
 					$("#mobile-bar").show();
 
 				}else{
@@ -335,7 +353,7 @@ app.main = (function(mfaProjects){
 				$(".container > p").addClass('fade');
 
 			}else{ //less than 1579
-				// if($(window).width() < 480 && scroll == true){
+				// if($(window).width() < breakPointMobile && scroll == true){
 
 				// 	//goToContent();
 				// }
