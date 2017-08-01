@@ -661,7 +661,7 @@ position: absolute;
 .category-section {
       /* width: 98%; */
     /* width: 100%; */
-    padding-left: 235px;
+    
     left: 0;
     right: 0;
     margin: auto;
@@ -1799,7 +1799,12 @@ position: relative;
     font-style: italic;
     line-height: 17px;
 }
-
+@media (max-width: 1650px){
+  .category-section{
+    padding-left: 235px;
+  }
+  
+}
 @media (max-width: 852px) {
   .tags{
     margin-top: 10px;
