@@ -7,7 +7,7 @@ var mfaProjects = [
 			"<p class='widget-title'>Profit Calculator</p><div class='iframe-wrap-expert'><div id='i9MQrnrrIxY'><img src='img/expert-invest/profit-calculator.png'/></div></div>", //profit calc
 			"<p class='widget-title'>Margin and Pip Calculator</p><div class='iframe-wrap-expert'><div id='D773rzJk1FA'><img src='img/expert-invest/margin-pip-calculator-logo.png'/></div></div>",
 			"<p class='widget-title'>Swap Calculator</p><div class='iframe-wrap-expert' id='n-erP_78DUA-wrap'><div id='n-erP_78DUA'><img src='img/expert-invest/swap-calculator.png'/></div></div>",
-			"<p class='widget-title'>Currency Converter</p><div class='iframe-wrap-expert' id='dNVrseWmBJg-wrap'><img src='img/expert-invest/currency-converter-logo.jpg'/><div id='dNVrseWmBJg'></div></div>",
+			"<p class='widget-title'>Currency Converter</p><div class='iframe-wrap-expert' id='dNVrseWmBJg-wrap'><div id='dNVrseWmBJg'><img src='img/expert-invest/currency-converter-logo.jpg'/></div></div>",
 			"<p class='widget-title'>Economic Calendar</p><div class='iframe-wrap-expert' id='piZ_NZgNpvI-wrap'><div id='piZ_NZgNpvI'><img src='img/expert-invest/economic-calendar-blue.png'/></div></div>",
 			"<p class='widget-title'>Currency Rates</p><div class='iframe-wrap-expert' id='kq9cNj_MS1U-wrap'><div id='kq9cNj_MS1U'><img src='img/expert-invest/rates-table-logo.png'/></div></div>",
 			
