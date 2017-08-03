@@ -63,6 +63,8 @@ app.main = (function(mfaProjects){
 								 $("div[description-name='"+ currentProject.replace('#','')+"']").css('margin-left','0%');
 							})
 						}
+					}else{
+						next.trigger('click');
 					}
 				}else if($(this).attr('id')=='prev'){
 					nextMobile = false;
@@ -83,6 +85,8 @@ app.main = (function(mfaProjects){
 								 $("div[description-name='"+ currentProject.replace('#','')+"']").css('margin-left','0%');
 							})
 						}
+					}else{
+						prev.trigger('click');
 					}
 					
 				}
